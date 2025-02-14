@@ -7,6 +7,9 @@
     transition: opacity .5s ease-out, visibility 0s linear .5s;
     z-index: 99999;
 }
+/* body{
+    overflow-x:hidden;
+} */
 
 #spinner.show {
     transition: opacity .5s ease-out, visibility 0s linear 0s;
@@ -289,7 +292,132 @@
     100% {width: 100%; height: 100%;}
 }
 /*** Carousel Hero Header End ***/
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #e3f2fd 0%, #f8f9fa 100%);
+  }
+  
+  .experience-badge {
+    transform: translateX(-30%) translateY(50%);
+    width: 250px;
+  }
+  @media (max-width: 360px) {
+    .experience-badge {
+        transform: translateX(-30%) translateY(50%);
+        max-width: 200px;
+        padding: 2px;
+        display: none;
+      }
+  }
+  .icon-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hover-top {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-top:hover {
+    transform: translateY(-10px);
+  }
+  
+  .stat-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .value-card {
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .value-card:hover {
+    border-color: #0d6efd;
+  }
+  /* goals  */
+  .goals-section {
+    background: linear-gradient(135deg, #0a192f 0%, #020c1b 100%);
+}
 
+.goal-card {
+    height: 400px;
+    min-height: 300px;
+}
+
+.goal-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.goal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%);
+}
+
+.goal-content {
+    transform: translateY(30px);
+    transition: all 0.4s ease;
+}
+
+.goal-hover-content {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.3s ease;
+}
+
+.goal-card:hover .goal-content,
+.goal-card:focus-within .goal-content {
+    transform: translateY(0);
+}
+
+.goal-card:hover .goal-hover-content,
+.goal-card:focus-within .goal-hover-content {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+@media (max-width: 768px) {
+    .goal-card {
+        height: 350px;
+    }
+    
+    .goal-hover-content {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .goal-content {
+        transform: translateY(0);
+    }
+    
+    .goal-image {
+        transform: none !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .goal-card {
+        height: 300px;
+    }
+    
+    .goal-overlay {
+        padding: 1.5rem !important;
+    }
+}
+  /* goals end */
 /*** Single Page Hero Header Start ***/
 .bg-breadcrumb {
     position: relative;
