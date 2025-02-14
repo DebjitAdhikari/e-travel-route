@@ -418,6 +418,113 @@
     }
 }
   /* goals end */
+/* timeline starts */
+.journey-timeline {
+    background: linear-gradient(45deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.title-gradient {
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.timeline-line {
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #3498db, #e74c3c);
+    transform: translateX(-50%);
+}
+
+.timeline-card {
+    padding: 0 30px;
+}
+
+.hover-transform {
+    transition: all 0.3s ease;
+    border-radius: 15px;
+}
+
+.hover-transform:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.year-tag {
+    padding: 12px 35px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.icon-wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.bg-primary-gradient { background: linear-gradient(45deg, #3498db, #2980b9); }
+.bg-success-gradient { background: linear-gradient(45deg, #2ecc71, #27ae60); }
+.bg-danger-gradient { background: linear-gradient(45deg, #e74c3c, #c0392b); }
+
+.animated-blob-1,
+.animated-blob-2 {
+    position: absolute;
+    background: rgba(52, 152, 219, 0.05);
+    border-radius: 50%;
+    animation: blob-animation 20s infinite;
+}
+
+.animated-blob-1 {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    left: -100px;
+}
+
+.animated-blob-2 {
+    width: 300px;
+    height: 300px;
+    bottom: -150px;
+    right: -100px;
+    animation-delay: 5s;
+}
+
+@keyframes blob-animation {
+    0% { transform: scale(1) translate(0, 0); }
+    33% { transform: scale(1.2) translate(100px, 50px); }
+    66% { transform: scale(0.8) translate(-50px, -100px); }
+    100% { transform: scale(1) translate(0, 0); }
+}
+
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 30px !important;
+        transform: none;
+    }
+    
+    .timeline-card {
+        padding: 0 15px;
+    }
+    
+    .year-tag {
+        margin: 20px 0;
+        font-size: 1.2rem;
+    }
+    
+    .timeline-item {
+        margin-bottom: 30px !important;
+    }
+}
+/* timeline ends */
 /*** Single Page Hero Header Start ***/
 .bg-breadcrumb {
     position: relative;
