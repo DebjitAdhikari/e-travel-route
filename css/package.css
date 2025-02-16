@@ -1,0 +1,158 @@
+/* Package Styles */
+.header-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.package-wrap {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.5s;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.package-wrap:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.package-wrap img {
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.5s;
+}
+
+.package-wrap:hover img {
+    transform: scale(1.1);
+}
+
+.package-content {
+    position: relative;
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.package-button {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.package-wrap:hover .package-button {
+    opacity: 1;
+}
+
+/* Filter Buttons */
+.btn-group .btn {
+    transition: all 0.3s ease;
+}
+
+.btn-group .btn.active {
+    transform: scale(1.05);
+}
+
+/* Gallery Styles */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    height: 300px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.gallery-content {
+    text-align: center;
+    transform: translateY(20px);
+    transition: all 0.5s;
+}
+
+.gallery-btn {
+    position: absolute;
+    bottom: -50px;
+    right: 30px;
+    transition: all 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover .gallery-content {
+    transform: translateY(0);
+}
+
+.gallery-item:hover .gallery-btn {
+    bottom: 30px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .package-button {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .gallery-overlay {
+        opacity: 1;
+    }
+    
+    .gallery-content {
+        transform: translateY(0);
+    }
+    
+    .gallery-btn {
+        bottom: 30px;
+    }
+
+    .package-wrap img {
+        height: 200px;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInUp {
+    animation: fadeInUp 1s ease-out;
+}
