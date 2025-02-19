@@ -28,6 +28,34 @@
         <!-- Include Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
+<style>
+    .modal-header {
+        border-bottom: none;
+    }
+
+    .modal-content {
+        border-radius: 10px;
+    }
+
+    .modal-body {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+
+    .form-control, .form-select {
+        border-radius: 8px;
+        border: 1px solid #ddd;
+    }
+/* 
+    .btn-primary {
+        background: linear-gradient(45deg, #007bff, #0056b3);
+        border: none;
+    }
+
+    .btn-primary:hover {
+        background: linear-gradient(45deg, #0056b3, #003f7f);
+    } */
+</style>
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
@@ -80,12 +108,15 @@
                                     <h1 class="display-6 text-uppercase text-white mb-4">Create Unforgettable Memories</h1>
                                     <p class="mb-4 fs-5">Experience seamless and personalized travel with Evolve Travel Route LLP. From breathtaking destinations to customized holiday packages, we turn your travel dreams into reality. 
                                     </p>
-                                    <div class="d-flex flex-shrink-0">
+                                    <!-- <div class="d-flex flex-shrink-0">
                                         <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Our Packages</a>
+                                    </div> -->
+                                    <div class="d-flex flex-shrink-0">
+                                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#" data-bs-toggle="modal" data-bs-target="#reservationModal">Book Now</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
+                            <!-- <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
                                 <div class="ticket-form p-3 ">
                                     <h2 class="text-dark text-uppercase mb-4">book your ticket</h2>
                                     <form>
@@ -119,12 +150,157 @@
                                         </div>
                                     </form>
                                 </div>
-                            </div> 
+                            </div>  -->
+                            <!-- <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
+                            <div class="col-12">
+                                <button type="button" class="btn btn-primary w-100 py-2 px-5">Start Your Journey Now</button>
+                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Reservation Modal -->
+<div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="reservationModalLabel">Book Your Journey</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <!-- Guest Information -->
+                    <h5 class="fw-bold text-primary">Guest Information</h5>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Name(s)" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Address" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Country" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Institution">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="tel" class="form-control" placeholder="Phone" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                    </div>
+
+                    <!-- Accommodation -->
+                    <h5 class="fw-bold text-primary">Accommodation</h5>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Hotel Category</label>
+                            <select class="form-select">
+                                <option selected>Select Category</option>
+                                <option>Budget</option>
+                                <option>Standard</option>
+                                <option>Deluxe</option>
+                                <option>3 Star</option>
+                                <option>4 Star</option>
+                                <option>5 Star</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Check-in</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Check-out</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Room Type</label>
+                            <select class="form-select">
+                                <option selected>Select Room</option>
+                                <option>Single</option>
+                                <option>Double</option>
+                                <option>Twin</option>
+                                <option>Standard</option>
+                                <option>Deluxe</option>
+                                <option>Suite</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Meals</label>
+                            <div class="d-flex">
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="checkbox" id="breakfast">
+                                    <label class="form-check-label" for="breakfast">Breakfast</label>
+                                </div>
+                                <div class="form-check me-3">
+                                    <input class="form-check-input" type="checkbox" id="lunch">
+                                    <label class="form-check-label" for="lunch">Lunch</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="dinner">
+                                    <label class="form-check-label" for="dinner">Dinner</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transport -->
+                    <h5 class="fw-bold text-primary">Transport</h5>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Vehicle Category</label>
+                            <select class="form-select">
+                                <option selected>Select Vehicle</option>
+                                <option>Hatchback</option>
+                                <option>Sedan</option>
+                                <option>SUV</option>
+                                <option>Luxury Car</option>
+                                <option>Tempo Traveller</option>
+                                <option>Bus</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Booking From</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Booking To</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <!-- Payment -->
+                    <h5 class="fw-bold text-primary">Payment</h5>
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Payment Method</label>
+                            <select class="form-select">
+                                <option selected>Select Payment</option>
+                                <option>UPI</option>
+                                <option>Credit Card</option>
+                                <option>Bank Transfer</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Amount (in INR)</label>
+                            <input type="number" class="form-control" placeholder="Enter Amount" required>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-end">
+                        <button type="submit" class="btn btn-primary px-4 py-2">Confirm Booking</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
         <!-- Carousel End -->
         
 
