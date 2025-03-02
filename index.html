@@ -30,6 +30,8 @@
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+   ]
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <!-- Include Swiper CSS -->
@@ -203,6 +205,8 @@
       </div>
     </div>
     <!-- Reservation Modal -->
+    
+      
     <div
       class="modal fade"
       id="reservationModal"
@@ -224,7 +228,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form>
+            <form onsubmit="handleFormSubmit(event)">
               <!-- personal Information -->
               <h5 class="fw-bold text-primary">Personal Information</h5>
               <div class="row g-3 mb-3">
@@ -1192,68 +1196,6 @@
     </div>
     <!-- Attractions End -->
 
-    <!-- Gallery Start -->
-    <!-- <div class="container-fluid gallery pb-5">
-            <div class="container pb-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Our Gallery</h4>
-                    <h1 class="display-5 mb-4">Captured Moments In Waterland</h1>
-                    <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
-                    </p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="gallery-item">
-                            <img src="img/gallery-1.jpg" class="img-fluid rounded w-100 h-100" alt="">
-                            <div class="search-icon">
-                                <a href="img/gallery-1.jpg" class="btn btn-light btn-lg-square rounded-circle" data-lightbox="Gallery-1"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="gallery-item">
-                            <img src="img/gallery-2.jpg" class="img-fluid rounded w-100 h-100" alt="">
-                            <div class="search-icon">
-                                <a href="img/gallery-2.jpg" class="btn btn-light btn-lg-square rounded-circle" data-lightbox="Gallery-2"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="gallery-item">
-                            <img src="img/gallery-3.jpg" class="img-fluid rounded w-100 h-100" alt="">
-                            <div class="search-icon">
-                                <a href="img/gallery-3.jpg" class="btn btn-light btn-lg-square rounded-circle" data-lightbox="Gallery-3"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="gallery-item">
-                            <img src="img/gallery-4.jpg" class="img-fluid rounded w-100 h-100" alt="">
-                            <div class="search-icon">
-                                <a href="img/gallery-4.jpg" class="btn btn-light btn-lg-square rounded-circle" data-lightbox="Gallery-4"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="gallery-item">
-                            <img src="img/gallery-5.jpg" class="img-fluid rounded w-100 h-100" alt="">
-                            <div class="search-icon">
-                                <a href="img/gallery-5.jpg" class="btn btn-light btn-lg-square rounded-circle" data-lightbox="Gallery-5"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="gallery-item">
-                            <img src="img/gallery-6.jpg" class="img-fluid rounded w-100 h-100" alt="">
-                            <div class="search-icon">
-                                <a href="img/gallery-6.jpg" class="btn btn-light btn-lg-square rounded-circle" data-lightbox="Gallery-6"><i class="fas fa-search-plus"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    <!-- Gallery End -->
 
     <!-- Blog Start -->
     <!-- <div class="container-fluid blog pb-5">
@@ -1321,89 +1263,7 @@
         </div> -->
     <!-- Blog End -->
 
-    <!-- Team Start -->
-    <!-- <div class="container-fluid team pb-5">
-            <div class="container pb-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Meet Our Team</h4>
-                    <h1 class="display-5 mb-4">Our Waterland Park Dedicated Team Member</h1>
-                    <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur adipisci facilis cupiditate recusandae aperiam temporibus corporis itaque quis facere, numquam, ad culpa deserunt sint dolorem autem obcaecati, ipsam mollitia hic.
-                    </p>
-                </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="team-item p-4">
-                            <div class="team-content">
-                                <div class="d-flex justify-content-between border-bottom pb-4">
-                                    <div class="text-start">
-                                        <h4 class="mb-0">David James</h4>
-                                        <p class="mb-0">Profession</p>
-                                    </div>
-                                    <div>
-                                        <img src="img/team-1.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
-                                    </div>
-                                </div>
-                                <div class="team-icon rounded-pill my-4 p-3">
-                                    <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                                <p class="text-center mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, quibusdam eveniet itaque provident sequi deserunt.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="team-item p-4">
-                            <div class="team-content">
-                                <div class="d-flex justify-content-between border-bottom pb-4">
-                                    <div class="text-start">
-                                        <h4 class="mb-0">William John</h4>
-                                        <p class="mb-0">Profession</p>
-                                    </div>
-                                    <div>
-                                        <img src="img/team-2.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
-                                    </div>
-                                </div>
-                                <div class="team-icon rounded-pill my-4 p-3">
-                                    <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                                <p class="text-center mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, quibusdam eveniet itaque provident sequi deserunt.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="team-item p-4">
-                            <div class="team-content">
-                                <div class="d-flex justify-content-between border-bottom pb-4">
-                                    <div class="text-start">
-                                        <h4 class="mb-0">Michael John</h4>
-                                        <p class="mb-0">Profession</p>
-                                    </div>
-                                    <div>
-                                        <img src="img/team-3.jpg" class="img-fluid rounded" style="width: 100px; height: 100px;" alt="">
-                                    </div>
-                                </div>
-                                <div class="team-icon rounded-pill my-4 p-3">
-                                    <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-circle me-3" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="btn btn-primary btn-sm-square rounded-circle me-0" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                                <p class="text-center mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, quibusdam eveniet itaque provident sequi deserunt.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    <!-- Team End -->
+   
 
     <!-- Testimonial Start -->
     <div class="container-fluid testimonial py-5" style="background: #414155">
@@ -1801,9 +1661,85 @@
           var offerModal = new bootstrap.Modal(document.getElementById('offerModal'));
           offerModal.show();
         });
+        const whatsappNumber = '918392056130'; // website owner's number with country code
+const whatsappBaseUrl = 'https://wa.me/';
+
+async function handleFormSubmit(event) {
+  event.preventDefault();
+  
+  // Collect form data
+  const formData = {
+    personal: {
+      name: document.getElementById('fullName').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      contactMethod: document.getElementById('contactMethod').value,
+      contactTime: document.getElementById('contactTime').value
+    },
+    travel: {
+      destination: Array.from(document.getElementById('destination').selectedOptions)
+        .map(option => option.value),
+      startDate: document.getElementById('startDate').value,
+      endDate: document.getElementById('endDate').value,
+      adults: document.getElementById('adults').value,
+      children: document.getElementById('children').value,
+      infants: document.getElementById('infants').value,
+      tripType: document.getElementById('tripType').value,
+      hotelCategory: document.getElementById('hotelCategory').value,
+      mealPreference: document.getElementById('mealPreference').value,
+      vehicleType: document.getElementById('vehicleType').value
+    }
+  };
+
+  // Generate PDF
+  const { jsPDF } = window.jspdf;
+  const pdf = new jsPDF();
+  pdf.setFontSize(18);
+  pdf.text('Travel Booking Details', 20, 20);
+  pdf.setFontSize(12);
+  
+  let yPosition = 30;
+  const addSection = (title, data) => {
+    pdf.setFontStyle('bold');
+    pdf.text(title, 20, yPosition);
+    yPosition += 10;
+    pdf.setFontStyle('normal');
+    Object.entries(data).forEach(([key, value]) => {
+      pdf.text(`${key}: ${value}`, 20, yPosition);
+      yPosition += 10;
+    });
+    yPosition += 5;
+  };
+
+  addSection('Personal Information', formData.personal);
+  addSection('Travel Details', formData.travel);
+  
+  // Save PDF
+  const pdfBlob = pdf.output('blob');
+  const pdfUrl = URL.createObjectURL(pdfBlob);
+
+  // Create WhatsApp message
+  const message = `New Booking Request!\n\n*Personal Details*\nName: ${formData.personal.name}\nEmail: ${formData.personal.email}\nPhone: ${formData.personal.phone}\n\n*Travel Details*\nDestination: ${formData.travel.destination.join(', ')}\nDates: ${formData.travel.startDate} to ${formData.travel.endDate}\nTravelers: ${formData.travel.adults} Adults, ${formData.travel.children} Children, ${formData.travel.infants} Infants`;
+
+  // Open WhatsApp with pre-filled message
+  const whatsappUrl = `${whatsappBaseUrl}${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  window.open(whatsappUrl, '_blank');
+
+  // Automatically download PDF
+  const link = document.createElement('a');
+  link.href = pdfUrl;
+  link.download = `booking-${Date.now()}.pdf`;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  // Close modal
+  bootstrap.Modal.getInstance(document.getElementById('reservationModal')).hide();
+}
         </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <!-- <script src="js/formPdf.js"></script> -->
     <script src="js/testimonial.js"></script>
   </body>
 </html>
