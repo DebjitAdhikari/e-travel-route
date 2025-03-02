@@ -1,52 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Evolve Travel Route - The best Travel Agency</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
-    <head>
-        <meta charset="utf-8">
-        <title>Evolve Travel Route - The best Travel Agency</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap"
+      rel="stylesheet"
+    />
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap" rel="stylesheet"> 
+    <!-- Icon Font Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Include Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <!-- Include Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-
-<style>
-    .modal-header {
+    <style>
+      .modal-header {
         border-bottom: none;
-    }
+      }
 
-    .modal-content {
+      .modal-content {
         border-radius: 10px;
-    }
+      }
 
-    .modal-body {
+      .modal-body {
         max-height: 70vh;
         overflow-y: auto;
-    }
+      }
 
-    .form-control, .form-select {
+      .form-control,
+      .form-select {
         border-radius: 8px;
         border: 1px solid #ddd;
-    }
-/* 
+      }
+      /* 
     .btn-primary {
         background: linear-gradient(45deg, #007bff, #0056b3);
         border: none;
@@ -55,68 +66,98 @@
     .btn-primary:hover {
         background: linear-gradient(45deg, #0056b3, #003f7f);
     } */
-</style>
+    </style>
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-    <body>
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
 
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
-
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid nav-bar sticky-top px-4 py-2 py-lg-0">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a href="" class="navbar-brand p-0">
-                    <img src="img/e-travel-logo.png" alt="Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="package.html" class="nav-item nav-link">Packages</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                        <!-- <a href="package.html" class="nav-item nav-link">Packages</a>
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid nav-bar sticky-top px-4 py-2 py-lg-0">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a href="" class="navbar-brand p-0">
+          <img src="img/e-travel-logo.png" alt="Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto py-0">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="package.html" class="nav-item nav-link">Packages</a>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+            <!-- <a href="package.html" class="nav-item nav-link">Packages</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a> -->
-                    </div>
-                </div>
-            </nav>
+          </div>
         </div>
-        
-        <!-- Navbar & Hero End -->
+      </nav>
+    </div>
 
-        <!-- Carousel Start -->
-        <div class="header-carousel owl-carousel">
-            <div class="header-carousel-item">
-                <img src="img/bg-tour-3.jpg" class="img-fluid w-100" alt="Image">
-                <div class="carousel-caption">
-                    <div class="container align-items-center py-4">
-                        <div class="row g-5 align-items-center">
-                            <div class="col-xl-7 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
-                                <div class="text-start">
-                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Welcome To Etravel Route</h4>
-                                    <h1 class="display-6 text-uppercase text-white mb-4">Create Unforgettable Memories</h1>
-                                    <p class="mb-4 fs-5">Experience seamless and personalized travel with Evolve Travel Route LLP. From breathtaking destinations to customized holiday packages, we turn your travel dreams into reality. 
-                                    </p>
-                                    <!-- <div class="d-flex flex-shrink-0">
+    <!-- Navbar & Hero End -->
+
+    <!-- Carousel Start -->
+    <div class="header-carousel owl-carousel">
+      <div class="header-carousel-item">
+        <img src="img/bg-tour-3.jpg" class="img-fluid w-100" alt="Image" />
+        <div class="carousel-caption">
+          <div class="container align-items-center py-4">
+            <div class="row g-5 align-items-center">
+              <div
+                class="col-xl-7 fadeInLeft animated"
+                data-animation="fadeInLeft"
+                data-delay="1s"
+                style="animation-delay: 1s"
+              >
+                <div class="text-start">
+                  <h4 class="text-primary text-uppercase fw-bold mb-4">
+                    Welcome To Etravel Route
+                  </h4>
+                  <h1 class="display-6 text-uppercase text-white mb-4">
+                    Create Unforgettable Memories
+                  </h1>
+                  <p class="mb-4 fs-5">
+                    Experience seamless and personalized travel with Evolve
+                    Travel Route LLP. From breathtaking destinations to
+                    customized holiday packages, we turn your travel dreams into
+                    reality.
+                  </p>
+                  <!-- <div class="d-flex flex-shrink-0">
                                         <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Our Packages</a>
                                     </div> -->
-                                    <div class="d-flex flex-shrink-0">
-                                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#" data-bs-toggle="modal" data-bs-target="#reservationModal">Book Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
+                  <div class="d-flex flex-shrink-0">
+                    <a
+                      class="btn btn-primary rounded-pill text-white py-3 px-5"
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#reservationModal"
+                      >Book Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
                                 <div class="ticket-form p-3 ">
                                     <h2 class="text-dark text-uppercase mb-4">book your ticket</h2>
                                     <form>
@@ -151,499 +192,1008 @@
                                     </form>
                                 </div>
                             </div>  -->
-                            <!-- <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
+              <!-- <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
                             <div class="col-12">
                                 <button type="button" class="btn btn-primary w-100 py-2 px-5">Start Your Journey Now</button>
                             </div>
                             </div> -->
-                        </div>
-                    </div>
-                </div>
             </div>
+          </div>
         </div>
-        <!-- Reservation Modal -->
-<div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title" id="reservationModalLabel">Book Your Journey</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <!-- Guest Information -->
-                    <h5 class="fw-bold text-primary">Guest Information</h5>
-                    <div class="row g-3 mb-3">
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Name(s)" required>
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Address" required>
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Country" required>
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Institution">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="tel" class="form-control" placeholder="Phone" required>
-                        </div>
-                        <div class="col-md-6">
-                            <input type="email" class="form-control" placeholder="Email" required>
-                        </div>
-                    </div>
-
-                    <!-- Accommodation -->
-                    <h5 class="fw-bold text-primary">Accommodation</h5>
-                    <div class="row g-3 mb-3">
-                        <div class="col-md-6">
-                            <label class="form-label">Hotel Category</label>
-                            <select class="form-select">
-                                <option selected>Select Category</option>
-                                <option>Budget</option>
-                                <option>Standard</option>
-                                <option>Deluxe</option>
-                                <option>3 Star</option>
-                                <option>4 Star</option>
-                                <option>5 Star</option>
-                            </select>
-                        </div>
-                        <div class="col-md-3">
-                            <label class="form-label">Check-in</label>
-                            <input type="date" class="form-control" required>
-                        </div>
-                        <div class="col-md-3">
-                            <label class="form-label">Check-out</label>
-                            <input type="date" class="form-control" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label">Room Type</label>
-                            <select class="form-select">
-                                <option selected>Select Room</option>
-                                <option>Single</option>
-                                <option>Double</option>
-                                <option>Twin</option>
-                                <option>Standard</option>
-                                <option>Deluxe</option>
-                                <option>Suite</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label">Meals</label>
-                            <div class="d-flex">
-                                <div class="form-check me-3">
-                                    <input class="form-check-input" type="checkbox" id="breakfast">
-                                    <label class="form-check-label" for="breakfast">Breakfast</label>
-                                </div>
-                                <div class="form-check me-3">
-                                    <input class="form-check-input" type="checkbox" id="lunch">
-                                    <label class="form-check-label" for="lunch">Lunch</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="dinner">
-                                    <label class="form-check-label" for="dinner">Dinner</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Transport -->
-                    <h5 class="fw-bold text-primary">Transport</h5>
-                    <div class="row g-3 mb-3">
-                        <div class="col-md-6">
-                            <label class="form-label">Vehicle Category</label>
-                            <select class="form-select">
-                                <option selected>Select Vehicle</option>
-                                <option>Hatchback</option>
-                                <option>Sedan</option>
-                                <option>SUV</option>
-                                <option>Luxury Car</option>
-                                <option>Tempo Traveller</option>
-                                <option>Bus</option>
-                            </select>
-                        </div>
-                        <div class="col-md-3">
-                            <label class="form-label">Booking From</label>
-                            <input type="date" class="form-control" required>
-                        </div>
-                        <div class="col-md-3">
-                            <label class="form-label">Booking To</label>
-                            <input type="date" class="form-control" required>
-                        </div>
-                    </div>
-
-                    <!-- Payment -->
-                    <h5 class="fw-bold text-primary">Payment</h5>
-                    <div class="row g-3 mb-3">
-                        <div class="col-md-6">
-                            <label class="form-label">Payment Method</label>
-                            <select class="form-select">
-                                <option selected>Select Payment</option>
-                                <option>UPI</option>
-                                <option>Credit Card</option>
-                                <option>Bank Transfer</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="form-label">Amount (in INR)</label>
-                            <input type="number" class="form-control" placeholder="Enter Amount" required>
-                        </div>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div class="text-end">
-                        <button type="submit" class="btn btn-primary px-4 py-2">Confirm Booking</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+      </div>
     </div>
-</div>
+    <!-- Reservation Modal -->
+    <div
+      class="modal fade"
+      id="reservationModal"
+      tabindex="-1"
+      aria-labelledby="reservationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title" id="reservationModalLabel">
+              Book Your Journey
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <!-- personal Information -->
+              <h5 class="fw-bold text-primary">Personal Information</h5>
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label for="fullName" class="form-label">Full Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fullName"
+                    placeholder="Enter your full name"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="contactMethod" class="form-label"
+                    >Preferred Contact Method</label
+                  >
+                  <select class="form-select" id="contactMethod" required>
+                    <option value="" disabled selected>
+                      Select a contact method
+                    </option>
+                    <option value="call">Call</option>
+                    <option value="whatsapp">WhatsApp</option>
+                    <option value="email">Email</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="contactTime" class="form-label"
+                    >Preferred Contact Time</label
+                  >
+                  <select class="form-select" id="contactTime" required>
+                    <option value="" disabled selected>Select a time</option>
+                    <option value="morning">Morning (9 AM - 12 PM)</option>
+                    <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                    <option value="evening">Evening (4 PM - 8 PM)</option>
+                  </select>
+                </div>
+              </div>
 
-        <!-- Carousel End -->
-        
+              <!-- Accommodation -->
+              <h5 class="fw-bold text-primary">Travel Details</h5>
+              <p>📌 Captures trip details to provide accurate quotes.</p>
+              <div class="row g-3 mb-3">
+                <!-- Destination (Multiple Select) -->
+                <div class="col-md-6">
+                  <label for="destination" class="form-label"
+                    >Destination</label
+                  >
+                  <select
+                    class="form-select"
+                    id="destination"
+                    multiple
+                    required
+                  >
+                    <option value="kashmir">Kashmir</option>
+                    <option value="ladakh">Ladakh</option>
+                    <option value="himachal">Himachal Pradesh</option>
+                    <option value="uttarakhand">Uttarakhand</option>
+                    <option value="rajasthan">Rajasthan</option>
+                  </select>
+                </div>
 
-        <!-- About Start -->
-        <div class="about-section py-5 bg-gradient-primary">
-            <div class="container">
-              <div class="row align-items-center ">
-                
-                <!-- Image Column -->
-                <div class="col-lg-6 mb-5 mb-lg-0" >
-                    <div class="position-relative ">
-                      <img src="img/mountain-bg.jpg" alt="Travel Team" class="rounded-3 img-fluid shadow-lg" >
-                      <div class="experience-badge bg-primary text-white p-4 rounded-3 shadow position-absolute bottom-0 start-0 translate-middle-y">
-                        <h3 class="mb-0"><i class="fas fa-award me-2"></i>15+ Years Experience</h3>
-                      </div>
+                <!-- Travel Start Date -->
+                <div class="col-md-6">
+                  <label for="startDate" class="form-label"
+                    >Travel Start Date</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="startDate"
+                    required
+                  />
+                </div>
+
+                <!-- Travel End Date -->
+                <div class="col-md-6">
+                  <label for="endDate" class="form-label"
+                    >Travel End Date</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="endDate"
+                    required
+                  />
+                </div>
+
+                <!-- Number of Travelers -->
+                <div class="col-md-4">
+                  <label for="adults" class="form-label"
+                    >Adults (Above 12 years)</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="adults"
+                    placeholder="Enter number of adults"
+                    min="1"
+                    required
+                  />
+                </div>
+                <div class="col-md-4">
+                  <label for="children" class="form-label"
+                    >Children (5-12 years)</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="children"
+                    placeholder="Enter number of children"
+                    min="0"
+                  />
+                </div>
+                <div class="col-md-4">
+                  <label for="infants" class="form-label"
+                    >Infants (Below 5 years)</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="infants"
+                    placeholder="Enter number of infants"
+                    min="0"
+                  />
+                </div>
+
+                <!-- Trip Type -->
+                <div class="col-md-6">
+                  <label for="tripType" class="form-label">Trip Type</label>
+                  <select class="form-select" id="tripType" required>
+                    <option value="" disabled selected>Select trip type</option>
+                    <option value="family">Family Tour</option>
+                    <option value="honeymoon">Honeymoon Package</option>
+                    <option value="group">Group Tour</option>
+                    <option value="corporate">Corporate Tour</option>
+                    <option value="solo">Solo Trip</option>
+                    <option value="pilgrimage">Pilgrimage Tour</option>
+                    <option value="custom">Custom Package</option>
+                  </select>
+                </div>
+
+                <!-- Custom Package Details (Textarea) -->
+                <div class="col-md-6">
+                  <label for="customDetails" class="form-label"
+                    >Custom Package Details</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="customDetails"
+                    rows="2"
+                    placeholder="Provide custom package details (if any)"
+                  ></textarea>
+                </div>
+
+                <!-- Hotel Category -->
+                <div class="col-md-6">
+                  <label for="hotelCategory" class="form-label"
+                    >Hotel Category</label
+                  >
+                  <select class="form-select" id="hotelCategory" required>
+                    <option value="" disabled selected>
+                      Select hotel category
+                    </option>
+                    <option value="budget">Budget (2-star)</option>
+                    <option value="standard">Standard (3-star)</option>
+                    <option value="premium">Premium (4-star)</option>
+                    <option value="luxury">Luxury (5-star)</option>
+                    <option value="villa">Villa Stay</option>
+                    <option value="houseboat">Houseboat</option>
+                  </select>
+                </div>
+
+                <!-- Meal Preference -->
+                <div class="col-md-6">
+                  <label for="mealPreference" class="form-label"
+                    >Meal Preference</label
+                  >
+                  <select class="form-select" id="mealPreference" required>
+                    <option value="" disabled selected>
+                      Select meal preference
+                    </option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="non-vegetarian">Non-Vegetarian</option>
+                    <option value="jain">Jain Meal</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="no-meal">No Meal Required</option>
+                  </select>
+                </div>
+              </div>
+              <!-- Transport -->
+              <h5 class="fw-bold text-primary">Transport & Sightseeing</h5>
+              <p>
+                📌 Understands traveler’s transport and sightseeing preferences.
+              </p>
+
+              <div class="row g-3 mb-3">
+                <!-- Transport Required (Yes/No) -->
+                <div class="col-md-6">
+                  <label class="form-label">Do you need transport?</label>
+                  <div class="d-flex">
+                    <div class="form-check me-3">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="transportRequired"
+                        id="transportYes"
+                        value="yes"
+                        required
+                      />
+                      <label class="form-check-label" for="transportYes"
+                        >Yes</label
+                      >
                     </div>
-                  </div>
-                <!-- Content Column -->
-                <div class="col-lg-6">
-                  <div class="ps-lg-5">
-                    <h2 class="text-uppercase text-primary mb-3">About Us</h2>
-                    <h1 class="display-5 fw-bold mb-4">Journeys Since 2010</h1>
-                    <p class="lead mb-5">Our journey started in year 2010 with focus
-                        on assisting in planning holidays and tours
-                        for domestic & International travels.
-                        we believe that travel is more than just
-                        visiting new places—it's about creating
-                        unforgettable memories, exploring diverse
-                        cultures, and embarking on journeys that
-                        inspire and transform. Founded with a
-                        passion for adventure and a commitment to
-                        excellence, we have become a trusted
-                        partner for travelers seeking personalized
-                        and extraordinary experiences.</p>
-                    
-                    <!-- Stats Grid -->
-                    <div class="row g-4 mb-5">
-                      <div class="col-6">
-                        <div class="stat-card bg-white p-4 rounded-3 shadow-sm">
-                          <h2 class="text-primary fw-bold">150K+</h2>
-                          <p class="mb-0 text-muted">Happy Travelers</p>
-                        </div>
-                      </div>
-                      <div class="col-6">
-                        <div class="stat-card bg-white p-4 rounded-3 shadow-sm">
-                          <h2 class="text-primary fw-bold">122+</h2>
-                          <p class="mb-0 text-muted">Global Awards</p>
-                        </div>
-                      </div>
-                    </div>
-          
-                    <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
-                        <button class="btn btn-primary btn-lg px-5 flex-shrink-0">
-                            <i class="fas fa-compass me-2"></i>Explore Tours
-                        </button>
-                        <a href="https://www.instagram.com/etravel_route/" class="btn btn-outline-primary btn-lg px-5 flex-shrink-0">
-                            <i class="fas fa-video me-2"></i>Watch Story
-                        </a>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="transportRequired"
+                        id="transportNo"
+                        value="no"
+                        required
+                      />
+                      <label class="form-check-label" for="transportNo"
+                        >No</label
+                      >
                     </div>
                   </div>
                 </div>
-                
+
+                <!-- Preferred Vehicle Type -->
+                <div class="col-md-6">
+                  <label for="vehicleType" class="form-label"
+                    >Preferred Vehicle Type</label
+                  >
+                  <select class="form-select" id="vehicleType" required>
+                    <option value="" disabled selected>
+                      Select a vehicle type
+                    </option>
+                    <option value="sedan">Sedan (Swift Dzire, Etios)</option>
+                    <option value="suv">SUV (Innova, Xylo)</option>
+                    <option value="tempo">Tempo Traveller</option>
+                    <option value="luxury">Luxury Car</option>
+                    <option value="none">No Transport Required</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Payment -->
+              <h5 class="fw-bold text-primary">Payment</h5>
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label">Payment Method</label>
+                  <select class="form-select">
+                    <option selected>Select Payment</option>
+                    <option>UPI</option>
+                    <option>Credit Card</option>
+                    <option>Bank Transfer</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Amount (in INR)</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Enter Amount"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="text-end">
+                <button type="submit" class="btn btn-primary px-4 py-2">
+                  Confirm Booking
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel End -->
+
+    <!-- About Start -->
+    <div class="about-section py-5 bg-gradient-primary">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Image Column -->
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="position-relative">
+              <img
+                src="img/mountain-bg.jpg"
+                alt="Travel Team"
+                class="rounded-3 img-fluid shadow-lg"
+              />
+              <div
+                class="experience-badge bg-primary text-white p-4 rounded-3 shadow position-absolute bottom-0 start-0 translate-middle-y"
+              >
+                <h3 class="mb-0">
+                  <i class="fas fa-award me-2"></i>15+ Years Experience
+                </h3>
               </div>
             </div>
           </div>
-          
-          <!-- Values Section -->
-          <section class="values-section py-5 bg-light">
-            <div class="container">
-              <div class="text-center mb-5">
-                <h6 class="text-uppercase text-primary mb-3">Our Core Values</h6>
-                <h2 class="display-5 fw-bold mb-4">The Heart of Our Journey</h2>
-              </div>
-          
-              <div class="row g-4">
-                <!-- Value Card 1 -->
-                <div class="col-md-6 wow fadeInUp col-lg-3" data-wow-delay="0.2s">
-                  <div class="value-card bg-white p-4 rounded-3 shadow-sm h-100 hover-top">
-                    <div class="icon-box bg-primary text-white rounded-circle mb-4">
-                      <i class="fas fa-hands-helping fa-2x"></i>
-                    </div>
-                    <h4 class="mb-3">Authentic Connections</h4>
-                    <p class="text-muted">Building meaningful relationships through cultural immersion and local experiences</p>
+          <!-- Content Column -->
+          <div class="col-lg-6">
+            <div class="ps-lg-5">
+              <h2 class="text-uppercase text-primary mb-3">Why Choose Us?</h2>
+              <h1 class="display-5 fw-bold mb-4">Journeys Since 2010</h1>
+              <p class="lead mb-5">
+                Our journey started in year 2010 with focus on assisting in
+                planning holidays and tours for domestic & International
+                travels. we believe that travel is more than just visiting new
+                places—it's about creating unforgettable memories, exploring
+                diverse cultures, and embarking on journeys that inspire and
+                transform. Founded with a passion for adventure and a commitment
+                to excellence, we have become a trusted partner for travelers
+                seeking personalized and extraordinary experiences.
+              </p>
+
+              <!-- Stats Grid -->
+              <div class="row g-4 mb-5">
+                <div class="col-6">
+                  <div class="stat-card bg-white p-4 rounded-3 shadow-sm">
+                    <h2 class="text-primary fw-bold">150K+</h2>
+                    <p class="mb-0 text-muted">Happy Travelers</p>
                   </div>
                 </div>
-          
-                <!-- Value Card 2 -->
-                <div class="col-md-6 wow fadeInUp col-lg-3" data-wow-delay="0.4s">
-                  <div class="value-card bg-white p-4 rounded-3 shadow-sm h-100 hover-top">
-                    <div class="icon-box bg-primary text-white rounded-circle mb-4">
-                      <i class="fas fa-shield-alt fa-2x"></i>
-                    </div>
-                    <h4 class="mb-3">Traveler Safety</h4>
-                    <p class="text-muted">Implementing rigorous safety protocols and 24/7 support systems</p>
-                  </div>
-                </div>
-          
-                <!-- Value Card 3 -->
-                <div class="col-md-6 wow fadeInUp col-lg-3" data-wow-delay="0.6s">
-                  <div class="value-card bg-white p-4 rounded-3 shadow-sm h-100 hover-top">
-                    <div class="icon-box bg-primary text-white rounded-circle mb-4">
-                      <i class="fas fa-leaf fa-2x"></i>
-                    </div>
-                    <h4 class="mb-3">Sustainable Travel</h4>
-                    <p class="text-muted">Commited to eco-friendly practices and community empowerment</p>
-                  </div>
-                </div>
-          
-                <!-- Value Card 4 -->
-                <div class="col-md-6 wow fadeInUp col-lg-3" data-wow-delay="0.8s">
-                  <div class="value-card bg-white p-4 rounded-3 shadow-sm h-100 hover-top">
-                    <div class="icon-box bg-primary text-white rounded-circle mb-4">
-                      <i class="fas fa-lightbulb fa-2x"></i>
-                    </div>
-                    <h4 class="mb-3">Innovative Solutions</h4>
-                    <p class="text-muted">Pioneering smart travel technology for seamless experiences</p>
+                <div class="col-6">
+                  <div class="stat-card bg-white p-4 rounded-3 shadow-sm">
+                    <h2 class="text-primary fw-bold">122+</h2>
+                    <p class="mb-0 text-muted">Global Awards</p>
                   </div>
                 </div>
               </div>
+
+              <div
+                class="d-flex flex-column flex-sm-row gap-3 align-items-center"
+              >
+                <button class="btn btn-primary btn-lg px-5 flex-shrink-0">
+                  <i class="fas fa-compass me-2"></i>Explore Tours
+                </button>
+                <a
+                  href="https://www.instagram.com/etravel_route/"
+                  class="btn btn-outline-primary btn-lg px-5 flex-shrink-0"
+                >
+                  <i class="fas fa-video me-2"></i>Watch Story
+                </a>
+              </div>
             </div>
-          </section>
-        <!-- About End -->
-
-        
-
-        <!-- Service Start -->
-        <div class="container-fluid service py-5">
-            <div class="container service-section py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Our Service</h4>
-                    <h1 class="display-5 text-white mb-4">Explore Our Services</h1>
-                    <p class="mb-0 text-white">
-                        We offer innovative and tailored solutions to meet client needs, focusing on efficiency, quality, and scalability. We ensure seamless execution and exceptional results through expertise and cutting-edge technology.
-                    </p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-0 col-md-1 col-lg-2 col-xl-2"></div>
-                    <div class="col-md-10 col-lg-8 col-xl-8 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-days p-4">
-                            <div class="py-2 border-bottom border-top d-flex align-items-center justify-content-between flex-wrap"><h4 class="mb-0 pb-2 pb-sm-0">Monday - Friday</h4> <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i>11:00 AM - 16:00 PM</p></div>
-                            <div class="py-2 border-bottom d-flex align-items-center justify-content-between flex-shrink-1 flex-wrap"><h4 class="mb-0 pb-2 pb-sm-0">Saturday - Sunday</h4> <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i>09:00 AM - 17:00 PM</p></div>
-                            <div class="py-2 border-bottom d-flex align-items-center justify-content-between flex-shrink-1 flex-wrap"><h4 class="mb-0">Holiday</h4> <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i>09:00 AM - 17:00 PM</p></div>
-                        </div>
-                    </div>
-                    <div class="col-0 col-md-1 col-lg-2 col-xl-2"></div>
-
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item p-4">
-                            <div class="service-content">
-                                <div class="mb-4">
-                                    <i class="fas fa-industry fa-4x"></i>
-                                </div>
-                                <a href="#" class="h4 d-inline-block mb-3">Industrial Visits</a>
-                                <p class="mb-0">Well-organized industry visits for students and professionals to gain hands-on experience and exposure.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-item p-4">
-                            <div class="service-content">
-                                <div class="mb-4">
-                                    <i class="fas fa-user-graduate fa-4x"></i>
-                                </div>
-                                <a href="#" class="h4 d-inline-block mb-3">Excursion & Study Tours</a>
-                                <p class="mb-0">Educational trips designed for students to explore new places while learning outside the classroom.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="service-item p-4">
-                            <div class="service-content">
-                                <div class="mb-4">
-                                    <i class="fas fa-calendar-check fa-4x"></i>
-                                </div>
-                                <a href="#" class="h4 d-inline-block mb-3">Event Planning & Management</a>
-                                <p class="mb-0">Comprehensive event management services, from corporate gatherings to leisure events.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="service-item p-4">
-                            <div class="service-content">
-                                <div class="mb-4">
-                                    <i class="fas fa-ship fa-4x"></i>
-                                </div>
-                                <a href="#" class="h4 d-inline-block mb-3">Cruise Booking</a>
-                                <p class="mb-0">Luxury cruise experiences with seamless booking services for domestic and international destinations.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="1s">
-                        <div class="service-item p-4">
-                            <div class="service-content">
-                                <div class="mb-4">
-                                    <i class="fas fa-plane fa-4x"></i>
-                                </div>
-                                <a href="#" class="h4 d-inline-block mb-3">Air Ticket Booking</a>
-                                <p class="mb-0">Hassle-free flight bookings with competitive pricing for domestic and international travel.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="1.2s">
-                        <div class="service-item p-4">
-                            <div class="service-content">
-                                <div class="mb-4">
-                                    <i class="fas fa-hotel fa-4x"></i>
-                                </div>
-                                <a href="#" class="h4 d-inline-block mb-3">Hotel & Resort Booking</a>
-                                <p class="mb-0">Exclusive hotel and resort bookings tailored to your comfort and travel preferences.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="1.4s">
-                        <div class="service-item p-4">
-                            <div class="service-content">
-                                <div class="mb-4">
-                                    <i class="fas fa-taxi fa-4x"></i>
-                                </div>
-                                <a href="#" class="h4 d-inline-block mb-3">Cab Services</a>
-                                <p class="mb-0">Reliable and convenient transportation solutions for city and outstation travel.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="1.6s">
-                        <div class="service-item p-4">
-                            <div class="service-content">
-                                <div class="mb-4">
-                                    <i class="fas fa-globe fa-4x"></i>
-                                </div>
-                                <a href="#" class="h4 d-inline-block mb-3">Customized Holiday Packages</a>
-                                <p class="mb-0">Tailor-made travel experiences designed to match your unique preferences and budget.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
+          </div>
         </div>
-        <!-- Service End -->
-
-
-        <!-- Ticket Packages Start -->
-        <div class="container-fluid py-5">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-12 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="packages-item h-100">
-                            <h4 class="text-primary">Ticket Packages</h4>
-                            <h1 class="display-5 mb-4">Choose The Best Packages For Your Family</h1>
-                            <p class="mb-4">Our National and International Tour Packages offer unforgettable travel experiences, covering stunning destinations across India and around the world. Whether you seek adventure, relaxation, or cultural exploration, we have the perfect itinerary for you!
-                            </p>
-                            <p><i class="fa fa-check text-primary me-2"></i>Tailored travel plans to match your preferences and budget.</p>
-                            <p><i class="fa fa-check text-primary me-2"></i>Dedicated customer assistance throughout your journey.
-                                 
-                                </p>
-                            <p><i class="fa fa-check text-primary me-2"></i>Accommodation, transport, meals, and sightseeing covered.</p>
-                            <p class="mb-5"><i class="fa fa-check text-primary me-2"></i>Well-planned tours ensuring a hassle-free experience.</p>
-                            <a href="#" class="btn btn-primary rounded-pill py-3 px-5"> Book Now</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="pricing-item bg-dark rounded text-center p-3 h-100">
-                            <div class="pb-4 border-bottom">
-                                <h2 class="mb-4 text-primary">International Packages</h2>
-                                <p class="mb-4">From comfortable stays to guided tours, we take care of everything for you!</p>
-                                <h2 class="mb-0 text-primary">₹7,090<span class="text-body fs-5 fw-normal">/family</span></h2>
-                            </div>
-                            <div class="py-4">
-                                <p class="mb-4"><i class="fa fa-check text-primary me-2"></i>Premium Hotel Stays</p>
-                                <p class="mb-4"><i class="fa fa-check text-primary me-2"></i>Airport Transfers</p>
-                                <p class="mb-4"><i class="fa fa-check text-primary me-2"></i>Visa & Travel Assistance</p>
-                                <p class="mb-4"><i class="fa fa-check text-primary me-2"></i>Adventure & Leisure Activities</p>
-                                <p class="mb-4"><i class="fa fa-check text-primary me-2"></i>Free Four Towels</p>
-                            </div>
-                            <a href="#" class="btn btn-light rounded-pill py-3 px-5"> Book Now</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="pricing-item bg-primary rounded text-center p-3 h-100">
-                            <div class="pb-4 border-bottom">
-                                <h2 class="text-dark mb-4">National Packages</h2>
-                                <p class="text-white mb-4">Include premium amenities to ensure a seamless and enjoyable travel experience.</p>
-                                <h2 class="text-dark mb-0">₹6,090<span class="text-white fs-5 fw-normal">/family</span></h2>
-                            </div>
-                            <div class="text-white py-4">
-                                <p class="mb-4"><i class="fa fa-check text-dark me-2"></i>Stay in top-rated hotels or resorts.</p>
-                                <p class="mb-4"><i class="fa fa-check text-dark me-2"></i>Comfortable AC buses, trains, or private cabs.</p>
-                                <p class="mb-4"><i class="fa fa-check text-dark me-2"></i>Explore famous landmarks with expert guides.</p>
-                                <p class="mb-4"><i class="fa fa-check text-dark me-2"></i>Enjoy delicious local and multi-cuisine meals.</p>
-                            </div>
-                            <a href="#" class="btn btn-dark rounded-pill py-3 px-5"> Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+   <!-- why book with us start -->
+   <section class="why-book-section py-5 bg-gradient-primary position-relative">
+    <!-- Limited Time Offer Modal -->
+    <div class="modal fade" id="offerModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">Special Offer! 🎉</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center p-5">
+            <h3 class="mb-4">Get ₹2,000 Off on Your First Booking!</h3>
+            <button class="btn btn-primary btn-lg">Claim Your Discount</button>
+          </div>
         </div>
-        <!-- Ticket Packages End -->
-
-
-        <!-- Attractions Start -->
-        <div class="container-fluid attractions py-5">
-            <div class="container attractions-section py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h4 class="text-primary">Attractions</h4>
-                    <h1 class="display-5 text-white mb-4">Explore Our Attractions</h1>
-                    <p class="text-white mb-0">Discover the World's Hidden Gems. Step into a realm of breathtaking landscapes, vibrant cultures, and unforgettable adventures. Our travel section is your gateway to curated experiences, from the serene shores of secluded islands to the bustling energy of ancient cities. Let us guide you on a journey that ignites your soul and creates memories to last a lifetime.
-                    </p>
-                </div>
-                <div class="owl-carousel attractions-carousel wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="attractions-item wow fadeInUp" data-wow-delay="0.2s">
-                        <img src="img/attraction-1.jpg" class="img-fluid rounded w-100" alt="">
-                        <a href="#" class="attractions-name">Roller Coaster</a>
-                    </div>
-                    <div class="attractions-item wow fadeInUp" data-wow-delay="0.4s">
-                        <img src="img/attraction-2.jpg" class="img-fluid rounded w-100" alt="">
-                        <a href="#" class="attractions-name">Carousel</a>
-                    </div>
-                    <div class="attractions-item wow fadeInUp" data-wow-delay="0.6s">
-                        <img src="img/attraction-3.jpg" class="img-fluid rounded w-100" alt="">
-                        <a href="#" class="attractions-name">Arcade Game</a>
-                    </div>
-                    <div class="attractions-item wow fadeInUp" data-wow-delay="0.8s">
-                        <img src="img/attraction-4.jpg" class="img-fluid rounded w-100" alt="">
-                        <a href="#" class="attractions-name">Hanging Carousel</a>
-                    </div>
-                    <div class="attractions-item wow fadeInUp" data-wow-delay="1s">
-                        <img src="img/attraction-2.jpg" class="img-fluid rounded w-100" alt="">
-                        <a href="#" class="attractions-name">Carousel</a>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+  
+    <div class="container">
+      <!-- Section Heading -->
+      <div class="text-center mb-5">
+        <h2 class="text-uppercase text-primary mb-3">Why Book With Us?</h2>
+        <h1 class="display-5 fw-bold mb-4">Your Perfect Journey Begins Here</h1>
+      </div>
+  
+      <!-- Features Grid -->
+      <div class="row g-4 mb-5">
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card bg-white p-4 rounded-3 shadow-sm text-center">
+            <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+            <h4 class="mb-3">Best Price Guarantee</h4>
+            <p class="text-muted">Unbeatable rates with quality service assurance</p>
+          </div>
         </div>
-        <!-- Attractions End -->
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card bg-white p-4 rounded-3 shadow-sm text-center">
+            <i class="fas fa-headset fa-3x text-primary mb-3"></i>
+            <h4 class="mb-3">24/7 Support</h4>
+            <p class="text-muted">Round-the-clock assistance during your trip</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card bg-white p-4 rounded-3 shadow-sm text-center">
+            <i class="fas fa-map-marked-alt fa-3x text-primary mb-3"></i>
+            <h4 class="mb-3">Customizable Tours</h4>
+            <p class="text-muted">Tailor-made itineraries to suit your needs</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card bg-white p-4 rounded-3 shadow-sm text-center">
+            <i class="fas fa-certificate fa-3x text-primary mb-3"></i>
+            <h4 class="mb-3">Award Winning</h4>
+            <p class="text-muted">Recognized for excellence in travel services</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Best Sellers Sections -->
+      <div class="row g-5">
+        <!-- Kashmir Packages -->
+        <div class="col-lg-6">
+          <div class="package-card bg-white rounded-3 shadow-sm overflow-hidden">
+            <div class="position-relative">
+              <img src="https://cdn.pixabay.com/photo/2019/08/14/09/52/haji-peer-azad-kashmir-4405256_1280.jpg" alt="Kashmir" class="img-fluid">
+              <div class="package-badge bg-primary text-white p-3 position-absolute top-0 end-0 m-3">
+                <h5 class="mb-0">Bestseller</h5>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="mb-3">Popular Kashmir Packages</h3>
+              <div class="package-list">
+                <div class="d-flex justify-content-between border-bottom py-2">
+                  <span>7 Days Srinagar-Gulmarg Tour</span>
+                  <span class="text-primary">₹18,499</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom py-2">
+                  <span>10 Days Kashmir Valley Explorer</span>
+                  <span class="text-primary">₹25,999</span>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                  <span>5 Days Houseboat Special</span>
+                  <span class="text-primary">₹12,999</span>
+                </div>
+              </div>
+              <button class="btn btn-primary mt-4 w-100">View All Packages</button>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Northeast Packages -->
+        <div class="col-lg-6">
+          <div class="package-card bg-white rounded-3 shadow-sm overflow-hidden">
+            <div class="position-relative">
+              <img src="https://cdn.pixabay.com/photo/2019/01/09/18/36/suwon-hwaseong-3923984_1280.jpg" alt="Northeast" class="img-fluid">
+              <div class="package-badge bg-primary text-white p-3 position-absolute top-0 end-0 m-3">
+                <h5 class="mb-0">Trending</h5>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="mb-3">Popular Northeast Packages</h3>
+              <div class="package-list">
+                <div class="d-flex justify-content-between border-bottom py-2">
+                  <span>8 Days Seven Sisters Tour</span>
+                  <span class="text-primary">₹32,999</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom py-2">
+                  <span>6 Days Meghalaya Adventure</span>
+                  <span class="text-primary">₹21,499</span>
+                </div>
+                <div class="d-flex justify-content-between pt-2">
+                  <span>5 Days Sikkim Cultural Tour</span>
+                  <span class="text-primary">₹18,999</span>
+                </div>
+              </div>
+              <button class="btn btn-primary mt-4 w-100">Explore Northeast</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   <!-- why book with us end -->
+    <!-- Values Section -->
+    <section class="values-section py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h6 class="text-uppercase text-primary mb-3">Our Core Values</h6>
+          <h2 class="display-5 fw-bold mb-4">The Heart of Our Journey</h2>
+        </div>
 
-        <!-- Gallery Start -->
-        <!-- <div class="container-fluid gallery pb-5">
+        <div class="row g-4">
+          <!-- Value Card 1 -->
+          <div class="col-md-6 wow fadeInUp col-lg-3" data-wow-delay="0.2s">
+            <div
+              class="value-card bg-white p-4 rounded-3 shadow-sm h-100 hover-top"
+            >
+              <div class="icon-box bg-primary text-white rounded-circle mb-4">
+                <i class="fas fa-hands-helping fa-2x"></i>
+              </div>
+              <h4 class="mb-3">Authentic Connections</h4>
+              <p class="text-muted">
+                Building meaningful relationships through cultural immersion and
+                local experiences
+              </p>
+            </div>
+          </div>
+
+          <!-- Value Card 2 -->
+          <div class="col-md-6 wow fadeInUp col-lg-3" data-wow-delay="0.4s">
+            <div
+              class="value-card bg-white p-4 rounded-3 shadow-sm h-100 hover-top"
+            >
+              <div class="icon-box bg-primary text-white rounded-circle mb-4">
+                <i class="fas fa-shield-alt fa-2x"></i>
+              </div>
+              <h4 class="mb-3">Traveler Safety</h4>
+              <p class="text-muted">
+                Implementing rigorous safety protocols and 24/7 support systems
+              </p>
+            </div>
+          </div>
+
+          <!-- Value Card 3 -->
+          <div class="col-md-6 wow fadeInUp col-lg-3" data-wow-delay="0.6s">
+            <div
+              class="value-card bg-white p-4 rounded-3 shadow-sm h-100 hover-top"
+            >
+              <div class="icon-box bg-primary text-white rounded-circle mb-4">
+                <i class="fas fa-leaf fa-2x"></i>
+              </div>
+              <h4 class="mb-3">Sustainable Travel</h4>
+              <p class="text-muted">
+                Commited to eco-friendly practices and community empowerment
+              </p>
+            </div>
+          </div>
+
+          <!-- Value Card 4 -->
+          <div class="col-md-6 wow fadeInUp col-lg-3" data-wow-delay="0.8s">
+            <div
+              class="value-card bg-white p-4 rounded-3 shadow-sm h-100 hover-top"
+            >
+              <div class="icon-box bg-primary text-white rounded-circle mb-4">
+                <i class="fas fa-lightbulb fa-2x"></i>
+              </div>
+              <h4 class="mb-3">Innovative Solutions</h4>
+              <p class="text-muted">
+                Pioneering smart travel technology for seamless experiences
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About End -->
+
+    <!-- Service Start -->
+    <div class="container-fluid service py-5">
+      <div class="container service-section py-5">
+        <div
+          class="text-center mx-auto pb-5 wow fadeInUp"
+          data-wow-delay="0.2s"
+          style="max-width: 800px"
+        >
+          <h4 class="text-primary">Our Service</h4>
+          <h1 class="display-5 text-white mb-4">Explore Our Services</h1>
+          <p class="mb-0 text-white">
+            We offer innovative and tailored solutions to meet client needs,
+            focusing on efficiency, quality, and scalability. We ensure seamless
+            execution and exceptional results through expertise and cutting-edge
+            technology.
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-0 col-md-1 col-lg-2 col-xl-2"></div>
+          <div
+            class="col-md-10 col-lg-8 col-xl-8 wow fadeInUp"
+            data-wow-delay="0.2s"
+          >
+            <div class="service-days p-4">
+              <div
+                class="py-2 border-bottom border-top d-flex align-items-center justify-content-between flex-wrap"
+              >
+                <h4 class="mb-0 pb-2 pb-sm-0">Monday - Friday</h4>
+                <p class="mb-0">
+                  <i class="fas fa-clock text-primary me-2"></i>11:00 AM - 16:00
+                  PM
+                </p>
+              </div>
+              <div
+                class="py-2 border-bottom d-flex align-items-center justify-content-between flex-shrink-1 flex-wrap"
+              >
+                <h4 class="mb-0 pb-2 pb-sm-0">Saturday - Sunday</h4>
+                <p class="mb-0">
+                  <i class="fas fa-clock text-primary me-2"></i>09:00 AM - 17:00
+                  PM
+                </p>
+              </div>
+              <div
+                class="py-2 border-bottom d-flex align-items-center justify-content-between flex-shrink-1 flex-wrap"
+              >
+                <h4 class="mb-0">Holiday</h4>
+                <p class="mb-0">
+                  <i class="fas fa-clock text-primary me-2"></i>09:00 AM - 17:00
+                  PM
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-0 col-md-1 col-lg-2 col-xl-2"></div>
+
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.2s"
+          >
+            <div class="service-item p-4">
+              <div class="service-content">
+                <div class="mb-4">
+                  <i class="fas fa-industry fa-4x"></i>
+                </div>
+                <a href="#" class="h4 d-inline-block mb-3">Industrial Visits</a>
+                <p class="mb-0">
+                  Well-organized industry visits for students and professionals
+                  to gain hands-on experience and exposure.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.4s"
+          >
+            <div class="service-item p-4">
+              <div class="service-content">
+                <div class="mb-4">
+                  <i class="fas fa-user-graduate fa-4x"></i>
+                </div>
+                <a href="#" class="h4 d-inline-block mb-3"
+                  >Excursion & Study Tours</a
+                >
+                <p class="mb-0">
+                  Educational trips designed for students to explore new places
+                  while learning outside the classroom.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.6s"
+          >
+            <div class="service-item p-4">
+              <div class="service-content">
+                <div class="mb-4">
+                  <i class="fas fa-calendar-check fa-4x"></i>
+                </div>
+                <a href="#" class="h4 d-inline-block mb-3"
+                  >Event Planning & Management</a
+                >
+                <p class="mb-0">
+                  Comprehensive event management services, from corporate
+                  gatherings to leisure events.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="0.8s"
+          >
+            <div class="service-item p-4">
+              <div class="service-content">
+                <div class="mb-4">
+                  <i class="fas fa-ship fa-4x"></i>
+                </div>
+                <a href="#" class="h4 d-inline-block mb-3">Cruise Booking</a>
+                <p class="mb-0">
+                  Luxury cruise experiences with seamless booking services for
+                  domestic and international destinations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="1s"
+          >
+            <div class="service-item p-4">
+              <div class="service-content">
+                <div class="mb-4">
+                  <i class="fas fa-plane fa-4x"></i>
+                </div>
+                <a href="#" class="h4 d-inline-block mb-3"
+                  >Air Ticket Booking</a
+                >
+                <p class="mb-0">
+                  Hassle-free flight bookings with competitive pricing for
+                  domestic and international travel.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="1.2s"
+          >
+            <div class="service-item p-4">
+              <div class="service-content">
+                <div class="mb-4">
+                  <i class="fas fa-hotel fa-4x"></i>
+                </div>
+                <a href="#" class="h4 d-inline-block mb-3"
+                  >Hotel & Resort Booking</a
+                >
+                <p class="mb-0">
+                  Exclusive hotel and resort bookings tailored to your comfort
+                  and travel preferences.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="1.4s"
+          >
+            <div class="service-item p-4">
+              <div class="service-content">
+                <div class="mb-4">
+                  <i class="fas fa-taxi fa-4x"></i>
+                </div>
+                <a href="#" class="h4 d-inline-block mb-3">Cab Services</a>
+                <p class="mb-0">
+                  Reliable and convenient transportation solutions for city and
+                  outstation travel.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
+            data-wow-delay="1.6s"
+          >
+            <div class="service-item p-4">
+              <div class="service-content">
+                <div class="mb-4">
+                  <i class="fas fa-globe fa-4x"></i>
+                </div>
+                <a href="#" class="h4 d-inline-block mb-3"
+                  >Customized Holiday Packages</a
+                >
+                <p class="mb-0">
+                  Tailor-made travel experiences designed to match your unique
+                  preferences and budget.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Service End -->
+
+    <!-- Ticket Packages Start -->
+    <div class="container-fluid py-5">
+      <div class="container py-5">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-12 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="packages-item h-100">
+              <h4 class="text-primary">Ticket Packages</h4>
+              <h1 class="display-5 mb-4">
+                Choose The Best Packages For Your Family
+              </h1>
+              <p class="mb-4">
+                Our National and International Tour Packages offer unforgettable
+                travel experiences, covering stunning destinations across India
+                and around the world. Whether you seek adventure, relaxation, or
+                cultural exploration, we have the perfect itinerary for you!
+              </p>
+              <p>
+                <i class="fa fa-check text-primary me-2"></i>Tailored travel
+                plans to match your preferences and budget.
+              </p>
+              <p>
+                <i class="fa fa-check text-primary me-2"></i>Dedicated customer
+                assistance throughout your journey.
+              </p>
+              <p>
+                <i class="fa fa-check text-primary me-2"></i>Accommodation,
+                transport, meals, and sightseeing covered.
+              </p>
+              <p class="mb-5">
+                <i class="fa fa-check text-primary me-2"></i>Well-planned tours
+                ensuring a hassle-free experience.
+              </p>
+              <a href="#" class="btn btn-primary rounded-pill py-3 px-5">
+                Book Now</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="pricing-item bg-dark rounded text-center p-3 h-100">
+              <div class="pb-4 border-bottom">
+                <h2 class="mb-4 text-primary">International Packages</h2>
+                <p class="mb-4">
+                  From comfortable stays to guided tours, we take care of
+                  everything for you!
+                </p>
+                <h2 class="mb-0 text-primary">
+                  ₹7,090<span class="text-body fs-5 fw-normal">/family</span>
+                </h2>
+              </div>
+              <div class="py-4">
+                <p class="mb-4">
+                  <i class="fa fa-check text-primary me-2"></i>Premium Hotel
+                  Stays
+                </p>
+                <p class="mb-4">
+                  <i class="fa fa-check text-primary me-2"></i>Airport Transfers
+                </p>
+                <p class="mb-4">
+                  <i class="fa fa-check text-primary me-2"></i>Visa & Travel
+                  Assistance
+                </p>
+                <p class="mb-4">
+                  <i class="fa fa-check text-primary me-2"></i>Adventure &
+                  Leisure Activities
+                </p>
+                <p class="mb-4">
+                  <i class="fa fa-check text-primary me-2"></i>Free Four Towels
+                </p>
+              </div>
+              <a href="#" class="btn btn-light rounded-pill py-3 px-5">
+                Book Now</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
+            <div class="pricing-item bg-primary rounded text-center p-3 h-100">
+              <div class="pb-4 border-bottom">
+                <h2 class="text-dark mb-4">National Packages</h2>
+                <p class="text-white mb-4">
+                  Include premium amenities to ensure a seamless and enjoyable
+                  travel experience.
+                </p>
+                <h2 class="text-dark mb-0">
+                  ₹6,090<span class="text-white fs-5 fw-normal">/family</span>
+                </h2>
+              </div>
+              <div class="text-white py-4">
+                <p class="mb-4">
+                  <i class="fa fa-check text-dark me-2"></i>Stay in top-rated
+                  hotels or resorts.
+                </p>
+                <p class="mb-4">
+                  <i class="fa fa-check text-dark me-2"></i>Comfortable AC
+                  buses, trains, or private cabs.
+                </p>
+                <p class="mb-4">
+                  <i class="fa fa-check text-dark me-2"></i>Explore famous
+                  landmarks with expert guides.
+                </p>
+                <p class="mb-4">
+                  <i class="fa fa-check text-dark me-2"></i>Enjoy delicious
+                  local and multi-cuisine meals.
+                </p>
+              </div>
+              <a href="#" class="btn btn-dark rounded-pill py-3 px-5">
+                Book Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Ticket Packages End -->
+
+    <!-- Attractions Start -->
+    <div class="container-fluid attractions py-5">
+      <div class="container attractions-section py-5">
+        <div
+          class="text-center mx-auto pb-5 wow fadeInUp"
+          data-wow-delay="0.2s"
+          style="max-width: 800px"
+        >
+          <h4 class="text-primary">Attractions</h4>
+          <h1 class="display-5 text-white mb-4">Explore Our Attractions</h1>
+          <p class="text-white mb-0">
+            Discover the World's Hidden Gems. Step into a realm of breathtaking
+            landscapes, vibrant cultures, and unforgettable adventures. Our
+            travel section is your gateway to curated experiences, from the
+            serene shores of secluded islands to the bustling energy of ancient
+            cities. Let us guide you on a journey that ignites your soul and
+            creates memories to last a lifetime.
+          </p>
+        </div>
+        <div
+          class="owl-carousel attractions-carousel wow fadeInUp"
+          data-wow-delay="0.1s"
+        >
+          <div class="attractions-item wow fadeInUp" data-wow-delay="0.2s">
+            <img
+              src="img/attraction-1.jpg"
+              class="img-fluid rounded w-100"
+              alt=""
+            />
+            <a href="#" class="attractions-name">Roller Coaster</a>
+          </div>
+          <div class="attractions-item wow fadeInUp" data-wow-delay="0.4s">
+            <img
+              src="img/attraction-2.jpg"
+              class="img-fluid rounded w-100"
+              alt=""
+            />
+            <a href="#" class="attractions-name">Carousel</a>
+          </div>
+          <div class="attractions-item wow fadeInUp" data-wow-delay="0.6s">
+            <img
+              src="img/attraction-3.jpg"
+              class="img-fluid rounded w-100"
+              alt=""
+            />
+            <a href="#" class="attractions-name">Arcade Game</a>
+          </div>
+          <div class="attractions-item wow fadeInUp" data-wow-delay="0.8s">
+            <img
+              src="img/attraction-4.jpg"
+              class="img-fluid rounded w-100"
+              alt=""
+            />
+            <a href="#" class="attractions-name">Hanging Carousel</a>
+          </div>
+          <div class="attractions-item wow fadeInUp" data-wow-delay="1s">
+            <img
+              src="img/attraction-2.jpg"
+              class="img-fluid rounded w-100"
+              alt=""
+            />
+            <a href="#" class="attractions-name">Carousel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Attractions End -->
+
+    <!-- Gallery Start -->
+    <!-- <div class="container-fluid gallery pb-5">
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h4 class="text-primary">Our Gallery</h4>
@@ -703,11 +1253,10 @@
                 </div>
             </div>
         </div> -->
-        <!-- Gallery End -->
+    <!-- Gallery End -->
 
-
-        <!-- Blog Start -->
-        <!-- <div class="container-fluid blog pb-5">
+    <!-- Blog Start -->
+    <!-- <div class="container-fluid blog pb-5">
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h4 class="text-primary">Our Blog</h4>
@@ -770,11 +1319,10 @@
                 </div>
             </div>
         </div> -->
-        <!-- Blog End -->
+    <!-- Blog End -->
 
-
-        <!-- Team Start -->
-        <!-- <div class="container-fluid team pb-5">
+    <!-- Team Start -->
+    <!-- <div class="container-fluid team pb-5">
             <div class="container pb-5">
                 <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                     <h4 class="text-primary">Meet Our Team</h4>
@@ -855,273 +1403,389 @@
                 </div>
             </div>
         </div> -->
-        <!-- Team End -->
+    <!-- Team End -->
 
+    <!-- Testimonial Start -->
+    <div class="container-fluid testimonial py-5" style="background: #414155">
+      <div class="container py-5">
+        <div class="text-center mx-auto pb-5" style="max-width: 800px">
+          <h4 class="text-primary">Testimonial</h4>
+          <h1 class="display-5 text-white mb-4">Our Customer Says</h1>
+          <p class="text-white mb-0">
+            We take pride in delivering exceptional services that exceed
+            expectations. Our clients' feedback speaks volumes about our
+            dedication, professionalism, and commitment to excellence.
+          </p>
+        </div>
 
-        <!-- Testimonial Start -->
-        <div class="container-fluid testimonial py-5" style="background: #414155;">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5" style="max-width: 800px;">
-                    <h4 class="text-primary">Testimonial</h4>
-                    <h1 class="display-5 text-white mb-4">Our Customer Says</h1>
-                    <p class="text-white mb-0">We take pride in delivering exceptional services that exceed expectations. Our clients' feedback speaks volumes about our dedication, professionalism, and commitment to excellence.</p>
+        <div class="row g-4 testimonial-grid">
+          <!-- Visible Testimonials -->
+          <div class="col-lg-4 col-md-6 testimonial-item visible">
+            <div class="testimonial-card p-4 h-100">
+              <div
+                class="media-preview mb-4"
+                data-bs-toggle="modal"
+                data-bs-target="#mediaModal"
+                data-media-type="image"
+                data-media-src="img/bg-tour-3.jpg"
+              >
+                <img
+                  src="img/bg-tour-3.jpg"
+                  class="img-fluid rounded"
+                  alt="Customer"
+                />
+                <div class="media-hover"><i class="fas fa-expand"></i></div>
+              </div>
+              <p class="text-white fs-5 mb-4">
+                "Absolutely life-changing experience! The team's professionalism
+                and attention to detail are unmatched in the industry."
+              </p>
+              <div class="testimonial-footer">
+                <h4 class="text-white">Debjit Adhikari</h4>
+                <div class="d-flex text-warning mb-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
-        
-                <div class="row g-4 testimonial-grid">
-                    <!-- Visible Testimonials -->
-                    <div class="col-lg-4 col-md-6 testimonial-item visible">
-                        <div class="testimonial-card p-4 h-100">
-                            <div class="media-preview mb-4" data-bs-toggle="modal" data-bs-target="#mediaModal" data-media-type="image" data-media-src="img/bg-tour-3.jpg">
-                                <img src="img/bg-tour-3.jpg" class="img-fluid rounded" alt="Customer">
-                                <div class="media-hover"><i class="fas fa-expand"></i></div>
-                            </div>
-                            <p class="text-white fs-5 mb-4">"Absolutely life-changing experience! The team's professionalism and attention to detail are unmatched in the industry."</p>
-                            <div class="testimonial-footer">
-                                <h4 class="text-white">Debjit Adhikari</h4>
-                                <div class="d-flex text-warning mb-2">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="col-lg-4 col-md-6 testimonial-item visible">
-                        <div class="testimonial-card p-4 h-100">
-                            <div class="media-preview mb-4" data-bs-toggle="modal" data-bs-target="#mediaModal" data-media-type="video" data-media-src="videos/tour-review-video.mp4">
-                                <video class="img-fluid rounded">
-                                    <source src="https://videos.pexels.com/video-files/30416945/13034748_1440_2560_30fps.mp4" type="video/mp4">
-                                </video>
-                                <div class="media-hover"><i class="fas fa-play"></i></div>
-                            </div>
-                            <p class="text-white fs-5 mb-4">"Outstanding results! They transformed our business completely. Truly a game-changer in the market!"</p>
-                            <div class="testimonial-footer">
-                                <h4 class="text-white">Sanjit Pal</h4>
-                                <div class="d-flex text-warning mb-2">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="col-lg-4 col-md-6 testimonial-item visible">
-                        <div class="testimonial-card p-4 h-100">
-                            <div class="media-preview mb-4" data-bs-toggle="modal" data-bs-target="#mediaModal" data-media-type="image" data-media-src="img/bg-tour-3.jpg">
-                                <img src="img/bg-tour-3.jpg" class="img-fluid rounded" alt="Customer">
-                                <div class="media-hover"><i class="fas fa-expand"></i></div>
-                            </div>
-                            <p class="text-white fs-5 mb-4">"Absolutely life-changing experience! The team's professionalism and attention to detail are unmatched in the industry."</p>
-                            <div class="testimonial-footer">
-                                <h4 class="text-white">Debjit Adhikari</h4>
-                                <div class="d-flex text-warning mb-2">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Hidden Testimonials -->
-                    <div class="col-lg-4 col-md-6 testimonial-item hidden">
-                        <!-- Add 2 more testimonials with same structure -->
-                        <div class="testimonial-card p-4 h-100">
-                            <div class="media-preview mb-4" data-bs-toggle="modal" data-bs-target="#mediaModal" data-media-type="video" data-media-src="videos/tour-review-video.mp4">
-                                <video class="img-fluid rounded">
-                                    <source src="https://videos.pexels.com/video-files/30416945/13034748_1440_2560_30fps.mp4" type="video/mp4">
-                                </video>
-                                <div class="media-hover"><i class="fas fa-play"></i></div>
-                            </div>
-                            <p class="text-white fs-5 mb-4">"Outstanding results! They transformed our business completely. Truly a game-changer in the market!"</p>
-                            <div class="testimonial-footer">
-                                <h4 class="text-white">Sanjit Pal</h4>
-                                <div class="d-flex text-warning mb-2">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                </div>
-        
-                <div class="text-center mt-5">
-                    <button class="btn btn-primary btn-see-more py-2 px-4">
-                        See More <i class="fas fa-chevron-down ms-2"></i>
-                    </button>
-                </div>
+              </div>
             </div>
-        </div>
-        
-        <!-- Media Modal -->
-        <div class="modal fade" id="mediaModal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content bg-dark">
-                    <div class="modal-body p-0">
-                        <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
-                        <div id="media-container">
-                            <!-- Dynamic content loaded here -->
-                        </div>
-                    </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 testimonial-item visible">
+            <div class="testimonial-card p-4 h-100">
+              <div
+                class="media-preview mb-4"
+                data-bs-toggle="modal"
+                data-bs-target="#mediaModal"
+                data-media-type="video"
+                data-media-src="videos/tour-review-video.mp4"
+              >
+                <video class="img-fluid rounded">
+                  <source
+                    src="https://videos.pexels.com/video-files/30416945/13034748_1440_2560_30fps.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <div class="media-hover"><i class="fas fa-play"></i></div>
+              </div>
+              <p class="text-white fs-5 mb-4">
+                "Outstanding results! They transformed our business completely.
+                Truly a game-changer in the market!"
+              </p>
+              <div class="testimonial-footer">
+                <h4 class="text-white">Sanjit Pal</h4>
+                <div class="d-flex text-warning mb-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
+              </div>
             </div>
-        </div>
-        <!-- Testimonial End -->
-        <div class="news-section py-5 bg-gradient-primary">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="text-uppercase text-primary">News & Updates</h2>
-                    <h1 class="display-5 fw-bold">Latest Travel Insights</h1>
-                    <p class="lead text-muted">Stay updated with the latest travel news, exclusive deals, and destination highlights.</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 testimonial-item visible">
+            <div class="testimonial-card p-4 h-100">
+              <div
+                class="media-preview mb-4"
+                data-bs-toggle="modal"
+                data-bs-target="#mediaModal"
+                data-media-type="image"
+                data-media-src="img/bg-tour-3.jpg"
+              >
+                <img
+                  src="img/bg-tour-3.jpg"
+                  class="img-fluid rounded"
+                  alt="Customer"
+                />
+                <div class="media-hover"><i class="fas fa-expand"></i></div>
+              </div>
+              <p class="text-white fs-5 mb-4">
+                "Absolutely life-changing experience! The team's professionalism
+                and attention to detail are unmatched in the industry."
+              </p>
+              <div class="testimonial-footer">
+                <h4 class="text-white">Debjit Adhikari</h4>
+                <div class="d-flex text-warning mb-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
-                
-                <div class="row g-4">
-                    <!-- News Card 1 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="news-card bg-white p-4 rounded-3 shadow-sm h-100">
-                            <img src="img/bg-tour-2.jpeg" alt="Travel News" class="img-fluid rounded-3 mb-3">
-                            <h3 class="text-primary fw-bold">Top Destinations for 2025</h3>
-                            <p class="text-muted">Discover the most breathtaking places to visit in 2025, from exotic beaches to cultural hotspots.</p>
-                            <a href="#" class="text-primary fw-bold">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- News Card 2 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="news-card bg-white p-4 rounded-3 shadow-sm h-100">
-                            <img src="img/blog-1.jpg" alt="Travel Tips" class="img-fluid rounded-3 mb-3">
-                            <h3 class="text-primary fw-bold">Exclusive Travel Deals</h3>
-                            <p class="text-muted">Enjoy limited-time discounts on flights, hotels, and vacation packages.</p>
-                            <a href="#" class="text-primary fw-bold">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- News Card 3 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="news-card bg-white p-4 rounded-3 shadow-sm h-100">
-                            <img src="img/feature-1.jpg" alt="Travel Tips" class="img-fluid rounded-3 mb-3">
-                            <h3 class="text-primary fw-bold">Travel Safety Guidelines</h3>
-                            <p class="text-muted">Stay informed about essential travel safety tips and COVID-19 regulations.</p>
-                            <a href="#" class="text-primary fw-bold">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+          <!-- Hidden Testimonials -->
+          <div class="col-lg-4 col-md-6 testimonial-item hidden">
+            <!-- Add 2 more testimonials with same structure -->
+            <div class="testimonial-card p-4 h-100">
+              <div
+                class="media-preview mb-4"
+                data-bs-toggle="modal"
+                data-bs-target="#mediaModal"
+                data-media-type="video"
+                data-media-src="videos/tour-review-video.mp4"
+              >
+                <video class="img-fluid rounded">
+                  <source
+                    src="https://videos.pexels.com/video-files/30416945/13034748_1440_2560_30fps.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+                <div class="media-hover"><i class="fas fa-play"></i></div>
+              </div>
+              <p class="text-white fs-5 mb-4">
+                "Outstanding results! They transformed our business completely.
+                Truly a game-changer in the market!"
+              </p>
+              <div class="testimonial-footer">
+                <h4 class="text-white">Sanjit Pal</h4>
+                <div class="d-flex text-warning mb-2">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <!-- Footer Start -->
-        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-6 col-xl-4">
-                        <div class="footer-item">
-                            <a href="index.html" class="p-0">
-                                <!-- <h4 class="text-white mb-4"><i class="fas fa-swimmer text-primary me-3"></i>WaterLand</h4> -->
-                                <img src="img/e-travel-logo.png" width="120px" class="bg-white" alt="Logo">
-                            </a>
-                            <p class="mb-2">Best travel agency for your free time.</p>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                                <p class="text-white mb-0">I69 Station Road (East), New Barrackpore, Kolkata – 700131</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <i class="fas fa-envelope text-primary me-3"></i>
-                                <p class="text-white mb-0">info@evolvetravelroute.com</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <i class="fa fa-phone-alt text-primary me-3"></i>
-                                <p class="text-white mb-0">+91-96259 11922</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <i class="fa fa-phone-alt text-primary me-3"></i>
-                                <p class="text-white mb-0"> +91-93323 63323</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-2">
-                        <div class="footer-item">
-                            <h4 class="text-white mb-4">Quick Links</h4>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Feature</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Attractions</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Tickets</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Blog</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Contact us</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-2">
-                        <div class="footer-item">
-                            <h4 class="text-white mb-4">Support</h4>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Disclaimer</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Support</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> FAQ</a>
-                            <a href="#"><i class="fas fa-angle-right me-2"></i> Help</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-4">
-                        <div class="footer-item">
-                            <h4 class="text-white mb-4">Opening Hours</h4>
-                            <div class="opening-date mb-3 pb-3">
-                                <div class="opening-clock flex-shrink-0">
-                                    <h6 class="text-white mb-0 me-auto">Monday - Friday:</h6>
-                                    <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i> 11:00 AM - 16:00 PM</p>
-                                </div>
-                                <div class="opening-clock flex-shrink-0">
-                                    <h6 class="text-white mb-0 me-auto">Satur - Sunday:</h6>
-                                    <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i> 09:00 AM - 17:00 PM</p>
-                                </div>
-                                <div class="opening-clock flex-shrink-0">
-                                    <h6 class="text-white mb-0 me-auto">Holiday:</h6>
-                                    <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i> 09:00 AM - 17:00 PM</p>
-                                </div>
-                            </div>
-                            <!-- <div>
+
+        <div class="text-center mt-5">
+          <button class="btn btn-primary btn-see-more py-2 px-4">
+            See More <i class="fas fa-chevron-down ms-2"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Media Modal -->
+    <div class="modal fade" id="mediaModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark">
+          <div class="modal-body p-0">
+            <button
+              type="button"
+              class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+              data-bs-dismiss="modal"
+            ></button>
+            <div id="media-container">
+              <!-- Dynamic content loaded here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial End -->
+    <div class="news-section py-5 bg-gradient-primary">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="text-uppercase text-primary">News & Updates</h2>
+          <h1 class="display-5 fw-bold">Latest Travel Insights</h1>
+          <p class="lead text-muted">
+            Stay updated with the latest travel news, exclusive deals, and
+            destination highlights.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- News Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="news-card bg-white p-4 rounded-3 shadow-sm h-100">
+              <img
+                src="img/bg-tour-2.jpeg"
+                alt="Travel News"
+                class="img-fluid rounded-3 mb-3"
+              />
+              <h3 class="text-primary fw-bold">Top Destinations for 2025</h3>
+              <p class="text-muted">
+                Discover the most breathtaking places to visit in 2025, from
+                exotic beaches to cultural hotspots.
+              </p>
+              <a href="#" class="text-primary fw-bold"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- News Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="news-card bg-white p-4 rounded-3 shadow-sm h-100">
+              <img
+                src="img/blog-1.jpg"
+                alt="Travel Tips"
+                class="img-fluid rounded-3 mb-3"
+              />
+              <h3 class="text-primary fw-bold">Exclusive Travel Deals</h3>
+              <p class="text-muted">
+                Enjoy limited-time discounts on flights, hotels, and vacation
+                packages.
+              </p>
+              <a href="#" class="text-primary fw-bold"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- News Card 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="news-card bg-white p-4 rounded-3 shadow-sm h-100">
+              <img
+                src="img/feature-1.jpg"
+                alt="Travel Tips"
+                class="img-fluid rounded-3 mb-3"
+              />
+              <h3 class="text-primary fw-bold">Travel Safety Guidelines</h3>
+              <p class="text-muted">
+                Stay informed about essential travel safety tips and COVID-19
+                regulations.
+              </p>
+              <a href="#" class="text-primary fw-bold"
+                >Read More <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-md-6 col-lg-6 col-xl-4">
+            <div class="footer-item">
+              <a href="index.html" class="p-0">
+                <!-- <h4 class="text-white mb-4"><i class="fas fa-swimmer text-primary me-3"></i>WaterLand</h4> -->
+                <img
+                  src="img/e-travel-logo.png"
+                  width="120px"
+                  class="bg-white"
+                  alt="Logo"
+                />
+              </a>
+              <p class="mb-2">Best travel agency for your free time.</p>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                <p class="text-white mb-0">
+                  I69 Station Road (East), New Barrackpore, Kolkata – 700131
+                </p>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="fas fa-envelope text-primary me-3"></i>
+                <p class="text-white mb-0">info@evolvetravelroute.com</p>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="fa fa-phone-alt text-primary me-3"></i>
+                <p class="text-white mb-0">+91-96259 11922</p>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="fa fa-phone-alt text-primary me-3"></i>
+                <p class="text-white mb-0">+91-93323 63323</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-2">
+            <div class="footer-item">
+              <h4 class="text-white mb-4">Quick Links</h4>
+              <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
+              <a href="#"><i class="fas fa-angle-right me-2"></i> Feature</a>
+              <a href="#"
+                ><i class="fas fa-angle-right me-2"></i> Attractions</a
+              >
+              <a href="#"><i class="fas fa-angle-right me-2"></i> Tickets</a>
+              <a href="#"><i class="fas fa-angle-right me-2"></i> Blog</a>
+              <a href="#"><i class="fas fa-angle-right me-2"></i> Contact us</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-2">
+            <div class="footer-item">
+              <h4 class="text-white mb-4">Support</h4>
+              <a href="#"
+                ><i class="fas fa-angle-right me-2"></i> Privacy Policy</a
+              >
+              <a href="#"
+                ><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a
+              >
+              <a href="#"><i class="fas fa-angle-right me-2"></i> Disclaimer</a>
+              <a href="#"><i class="fas fa-angle-right me-2"></i> Support</a>
+              <a href="#"><i class="fas fa-angle-right me-2"></i> FAQ</a>
+              <a href="#"><i class="fas fa-angle-right me-2"></i> Help</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-4">
+            <div class="footer-item">
+              <h4 class="text-white mb-4">Opening Hours</h4>
+              <div class="opening-date mb-3 pb-3">
+                <div class="opening-clock flex-shrink-0">
+                  <h6 class="text-white mb-0 me-auto">Monday - Friday:</h6>
+                  <p class="mb-0">
+                    <i class="fas fa-clock text-primary me-2"></i> 11:00 AM -
+                    16:00 PM
+                  </p>
+                </div>
+                <div class="opening-clock flex-shrink-0">
+                  <h6 class="text-white mb-0 me-auto">Satur - Sunday:</h6>
+                  <p class="mb-0">
+                    <i class="fas fa-clock text-primary me-2"></i> 09:00 AM -
+                    17:00 PM
+                  </p>
+                </div>
+                <div class="opening-clock flex-shrink-0">
+                  <h6 class="text-white mb-0 me-auto">Holiday:</h6>
+                  <p class="mb-0">
+                    <i class="fas fa-clock text-primary me-2"></i> 09:00 AM -
+                    17:00 PM
+                  </p>
+                </div>
+              </div>
+              <!-- <div>
                                 <p class="text-white mb-2">Payment Accepted</p>
                                 <img src="img/payment.png" class="img-fluid" alt="Image">
                             </div> -->
-                        </div>
-                    </div>
-                </div>
             </div>
+          </div>
         </div>
-        <!-- Footer End -->
-        
-        <!-- Copyright Start -->
-        <div class="container-fluid copyright py-4">
-            <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>E Travel Route</a>, All right reserved.</span>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end text-body">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom text-white" href="https://thinknxtmedia.com">Think Nxt Media</a>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-md-0">
+            <span class="text-body"
+              ><a href="#" class="border-bottom text-white"
+                ><i class="fas fa-copyright text-light me-2"></i>E Travel
+                Route</a
+              >, All right reserved.</span
+            >
+          </div>
+          <div class="col-md-6 text-center text-md-end text-body">
+            <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+            <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+            <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+            Designed By
+            <a class="border-bottom text-white" href="https://thinknxtmedia.com"
+              >Think Nxt Media</a
+            >
+          </div>
         </div>
-        <!-- Copyright End -->
+      </div>
+    </div>
+    <!-- Copyright End -->
 
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"
+      ><i class="fa fa-arrow-up"></i
+    ></a>
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
-
-        
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -1131,11 +1795,15 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    
-
+    <script>
+        // Initialize the offer modal
+        document.addEventListener('DOMContentLoaded', function() {
+          var offerModal = new bootstrap.Modal(document.getElementById('offerModal'));
+          offerModal.show();
+        });
+        </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="js/testimonial.js"></script>
-    </body>
-
+  </body>
 </html>

@@ -191,6 +191,26 @@
   }
 }
 /*** Navbar End ***/
+.why-book-section {
+  background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
+}
+
+.package-card {
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card {
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+}
 
 /*** Carousel Hero Header Start ***/
 .header-carousel .header-carousel-item img {
