@@ -25,6 +25,7 @@
         }
     });
 
+    
 
     // Hero Header carousel
     $(".header-carousel").owlCarousel({

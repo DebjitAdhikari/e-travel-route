@@ -31,7 +31,8 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-   
+
+    
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <!-- Include Swiper CSS -->
@@ -127,7 +128,7 @@
           <div class="container align-items-center py-4">
             <div class="row g-5 align-items-center">
               <div
-                class="col-xl-7 fadeInLeft animated"
+                class="col-xl-8 fadeInLeft animated"
                 data-animation="fadeInLeft"
                 data-delay="1s"
                 style="animation-delay: 1s"
@@ -205,7 +206,6 @@
       </div>
     </div>
     <!-- Reservation Modal -->
-    
       
     <div
       class="modal fade"
@@ -228,7 +228,7 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form onsubmit="handleFormSubmit(event)">
+            <form id="myForm" onsubmit="handleFormSubmit(event)">
               <!-- personal Information -->
               <h5 class="fw-bold text-primary">Personal Information</h5>
               <div class="row g-3 mb-3">
@@ -263,27 +263,25 @@
                   />
                 </div>
                 <div class="col-md-6">
-                  <label for="contactMethod" class="form-label"
-                    >Preferred Contact Method</label
-                  >
+                  <label for="contactMethod" class="form-label">
+                    Preferred Contact Method</label>
                   <select class="form-select" id="contactMethod" required>
                     <option value="" disabled selected>
                       Select a contact method
                     </option>
-                    <option value="call">Call</option>
-                    <option value="whatsapp">WhatsApp</option>
-                    <option value="email">Email</option>
+                    <option value="Call">Call</option>
+                    <option value="Whatsapp">WhatsApp</option>
+                    <option value="Email">Email</option>
                   </select>
                 </div>
                 <div class="col-md-6">
-                  <label for="contactTime" class="form-label"
-                    >Preferred Contact Time</label
-                  >
+                  <label for="contactTime" class="form-label">
+                    Preferred Contact Time</label>
                   <select class="form-select" id="contactTime" required>
                     <option value="" disabled selected>Select a time</option>
-                    <option value="morning">Morning (9 AM - 12 PM)</option>
-                    <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
-                    <option value="evening">Evening (4 PM - 8 PM)</option>
+                    <option value="Morning">Morning (9 AM - 12 PM)</option>
+                    <option value="Afternoon">Afternoon (12 PM - 4 PM)</option>
+                    <option value="Evening">Evening (4 PM - 8 PM)</option>
                   </select>
                 </div>
               </div>
@@ -294,21 +292,31 @@
               <div class="row g-3 mb-3">
                 <!-- Destination (Multiple Select) -->
                 <div class="col-md-6">
-                  <label for="destination" class="form-label"
-                    >Destination</label
-                  >
-                  <select
-                    class="form-select"
-                    id="destination"
-                    multiple
-                    required
-                  >
-                    <option value="kashmir">Kashmir</option>
-                    <option value="ladakh">Ladakh</option>
-                    <option value="himachal">Himachal Pradesh</option>
-                    <option value="uttarakhand">Uttarakhand</option>
-                    <option value="rajasthan">Rajasthan</option>
-                  </select>
+                  <div class="form-group">
+                    <label class="form-label">Destination</label>
+                    <div>
+                      <input type="checkbox" id="kashmir" value="Kashmir" name="destination[]">
+                      <label for="kashmir">Kashmir</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="ladakh" value="Ladakh" name="destination[]">
+                      <label for="ladakh">Ladakh</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="himachal" value="Himachal Pradesh" name="destination[]">
+                      <label for="himachal">Himachal Pradesh</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="uttarakhand" value="Uttarakhand" name="destination[]">
+                      <label for="uttarakhand">Uttarakhand</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="rajasthan" value="Rajasthan" name="destination[]">
+                      <label for="rajasthan">Rajasthan</label>
+                    </div>
+                  </div>
+                  
+                  
                 </div>
 
                 <!-- Travel Start Date -->
@@ -339,7 +347,7 @@
 
                 <!-- Number of Travelers -->
                 <div class="col-md-4">
-                  <label for="adults" class="form-label"
+                  <label for="Adults" class="form-label"
                     >Adults (Above 12 years)</label
                   >
                   <input
@@ -352,7 +360,7 @@
                   />
                 </div>
                 <div class="col-md-4">
-                  <label for="children" class="form-label"
+                  <label for="Children" class="form-label"
                     >Children (5-12 years)</label
                   >
                   <input
@@ -364,8 +372,8 @@
                   />
                 </div>
                 <div class="col-md-4">
-                  <label for="infants" class="form-label"
-                    >Infants (Below 5 years)</label
+                  <label for="Infants" class="form-label">
+                    Infants (Below 5 years)</label
                   >
                   <input
                     type="number"
@@ -381,13 +389,13 @@
                   <label for="tripType" class="form-label">Trip Type</label>
                   <select class="form-select" id="tripType" required>
                     <option value="" disabled selected>Select trip type</option>
-                    <option value="family">Family Tour</option>
-                    <option value="honeymoon">Honeymoon Package</option>
-                    <option value="group">Group Tour</option>
-                    <option value="corporate">Corporate Tour</option>
-                    <option value="solo">Solo Trip</option>
-                    <option value="pilgrimage">Pilgrimage Tour</option>
-                    <option value="custom">Custom Package</option>
+                    <option value="Family Tour">Family Tour</option>
+                    <option value="Honeymoon Package">Honeymoon Package</option>
+                    <option value="Group Tour">Group Tour</option>
+                    <option value="Corporate Tour">Corporate Tour</option>
+                    <option value="Solo Trip">Solo Trip</option>
+                    <option value="Pilgrimage Tour">Pilgrimage Tour</option>
+                    <option value="Custom Package">Custom Package</option>
                   </select>
                 </div>
 
@@ -413,12 +421,12 @@
                     <option value="" disabled selected>
                       Select hotel category
                     </option>
-                    <option value="budget">Budget (2-star)</option>
-                    <option value="standard">Standard (3-star)</option>
-                    <option value="premium">Premium (4-star)</option>
-                    <option value="luxury">Luxury (5-star)</option>
-                    <option value="villa">Villa Stay</option>
-                    <option value="houseboat">Houseboat</option>
+                    <option value="Budget (2-star)">Budget (2-star)</option>
+                    <option value="Standard  (3-star)">Standard (3-star)</option>
+                    <option value="Premium (4-star)">Premium (4-star)</option>
+                    <option value="Luxury  (5-star)">Luxury (5-star)</option>
+                    <option value="Villa">Villa Stay</option>
+                    <option value="Houseboat">Houseboat</option>
                   </select>
                 </div>
 
@@ -431,11 +439,11 @@
                     <option value="" disabled selected>
                       Select meal preference
                     </option>
-                    <option value="vegetarian">Vegetarian</option>
-                    <option value="non-vegetarian">Non-Vegetarian</option>
-                    <option value="jain">Jain Meal</option>
-                    <option value="vegan">Vegan</option>
-                    <option value="no-meal">No Meal Required</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Non-Vegetarian">Non-Vegetarian</option>
+                    <option value="Jain Meal">Jain Meal</option>
+                    <option value="Vegan">Vegan</option>
+                    <option value="No Meal Required">No Meal Required</option>
                   </select>
                 </div>
               </div>
@@ -456,7 +464,7 @@
                         type="radio"
                         name="transportRequired"
                         id="transportYes"
-                        value="yes"
+                        value="Yes"
                         required
                       />
                       <label class="form-check-label" for="transportYes"
@@ -469,7 +477,7 @@
                         type="radio"
                         name="transportRequired"
                         id="transportNo"
-                        value="no"
+                        value="No"
                         required
                       />
                       <label class="form-check-label" for="transportNo"
@@ -488,44 +496,29 @@
                     <option value="" disabled selected>
                       Select a vehicle type
                     </option>
-                    <option value="sedan">Sedan (Swift Dzire, Etios)</option>
-                    <option value="suv">SUV (Innova, Xylo)</option>
-                    <option value="tempo">Tempo Traveller</option>
-                    <option value="luxury">Luxury Car</option>
-                    <option value="none">No Transport Required</option>
+                    <option value="Sedan (Swift Dzire, Etios)">Sedan (Swift Dzire, Etios)</option>
+                    <option value="SUV (Innova, Xylo)">SUV (Innova, Xylo)</option>
+                    <option value="Tempo Traveller">Tempo Traveller</option>
+                    <option value="Luxury Car">Luxury Car</option>
+                    <option value="No Transport Required">No Transport Required</option>
                   </select>
                 </div>
               </div>
 
-              <!-- Payment -->
-              <h5 class="fw-bold text-primary">Payment</h5>
-              <div class="row g-3 mb-3">
-                <div class="col-md-6">
-                  <label class="form-label">Payment Method</label>
-                  <select class="form-select">
-                    <option selected>Select Payment</option>
-                    <option>UPI</option>
-                    <option>Credit Card</option>
-                    <option>Bank Transfer</option>
-                  </select>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Amount (in INR)</label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    placeholder="Enter Amount"
-                    required
-                  />
-                </div>
-              </div>
+              
 
               <!-- Submit Button -->
-              <div class="text-end">
-                <button type="submit" class="btn btn-primary px-4 py-2">
+              <div class="text-end mt-4">
+                <button type="submit" class="btn btn-primary px-4 py-2 me-3">
                   Confirm Booking
                 </button>
+                <a id="whatsappLink" href="#" style="display: none;" target="_blank" 
+                   class="btn btn-success px-4 py-2 d-inline-block">
+                  <i class="bi bi-whatsapp"></i> Send via WhatsApp
+                </a>
               </div>
+              
+  
             </form>
           </div>
         </div>
@@ -666,64 +659,53 @@
       <div class="row g-5">
         <!-- Kashmir Packages -->
         <div class="col-lg-6">
-          <div class="package-card bg-white rounded-3 shadow-sm overflow-hidden">
-            <div class="position-relative">
-              <img src="https://cdn.pixabay.com/photo/2019/08/14/09/52/haji-peer-azad-kashmir-4405256_1280.jpg" alt="Kashmir" class="img-fluid">
-              <div class="package-badge bg-primary text-white p-3 position-absolute top-0 end-0 m-3">
-                <h5 class="mb-0">Bestseller</h5>
-              </div>
+            <div class="package-card bg-white rounded-3 shadow-sm overflow-hidden">
+                <div class="position-relative">
+                    <img src="https://cdn.pixabay.com/photo/2019/08/14/09/52/haji-peer-azad-kashmir-4405256_1280.jpg" alt="Kashmir" class="img-fluid">
+                    <div class="package-badge bg-primary text-white p-2 position-absolute top-0 end-0 m-3">
+                        <h5 class="mb-0">Bestseller</h5>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="mb-3">Explore Kashmir</h3>
+                    <ul class="list-unstyled">
+                        <li class="py-2"><i class="bi bi-check-circle text-primary"></i> Serene Houseboats & Shikara Rides</li>
+                        <li class="py-2"><i class="bi bi-check-circle text-primary"></i> Snowy Peaks & Breathtaking Views</li>
+                        <li class="py-2"><i class="bi bi-check-circle text-primary"></i> Handpicked Luxury Stays</li>
+                    </ul>
+                    <a href="package.html">
+
+                      <button class="btn btn-primary mt-4 w-100">View Packages</button>
+                    </a>
+                  </div>
             </div>
-            <div class="p-4">
-              <h3 class="mb-3">Popular Kashmir Packages</h3>
-              <div class="package-list">
-                <div class="d-flex justify-content-between border-bottom py-2">
-                  <span>7 Days Srinagar-Gulmarg Tour</span>
-                  <span class="text-primary">₹18,499</span>
-                </div>
-                <div class="d-flex justify-content-between border-bottom py-2">
-                  <span>10 Days Kashmir Valley Explorer</span>
-                  <span class="text-primary">₹25,999</span>
-                </div>
-                <div class="d-flex justify-content-between pt-2">
-                  <span>5 Days Houseboat Special</span>
-                  <span class="text-primary">₹12,999</span>
-                </div>
-              </div>
-              <button class="btn btn-primary mt-4 w-100">View All Packages</button>
-            </div>
-          </div>
         </div>
-  
+    
         <!-- Northeast Packages -->
         <div class="col-lg-6">
-          <div class="package-card bg-white rounded-3 shadow-sm overflow-hidden">
-            <div class="position-relative">
-              <img src="https://cdn.pixabay.com/photo/2019/01/09/18/36/suwon-hwaseong-3923984_1280.jpg" alt="Northeast" class="img-fluid">
-              <div class="package-badge bg-primary text-white p-3 position-absolute top-0 end-0 m-3">
-                <h5 class="mb-0">Trending</h5>
-              </div>
+            <div class="package-card bg-white rounded-3 shadow-sm overflow-hidden">
+                <div class="position-relative">
+                    <img src="https://cdn.pixabay.com/photo/2019/01/09/18/36/suwon-hwaseong-3923984_1280.jpg" alt="Northeast" class="img-fluid">
+                    <div class="package-badge bg-primary text-white p-2 position-absolute top-0 end-0 m-3">
+                        <h5 class="mb-0">Trending</h5>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="mb-3">Discover Northeast</h3>
+                    <ul class="list-unstyled">
+                        <li class="py-2"><i class="bi bi-check-circle text-primary"></i> Mesmerizing Waterfalls & Caves</li>
+                        <li class="py-2"><i class="bi bi-check-circle text-primary"></i> Unexplored Scenic Beauty</li>
+                        <li class="py-2"><i class="bi bi-check-circle text-primary"></i> Cultural & Adventure Bliss</li>
+                    </ul>
+                    <a href="package.html">
+
+                      <button class="btn btn-primary mt-4 w-100">View Packages</button>
+                    </a>
+                </div>
             </div>
-            <div class="p-4">
-              <h3 class="mb-3">Popular Northeast Packages</h3>
-              <div class="package-list">
-                <div class="d-flex justify-content-between border-bottom py-2">
-                  <span>8 Days Seven Sisters Tour</span>
-                  <span class="text-primary">₹32,999</span>
-                </div>
-                <div class="d-flex justify-content-between border-bottom py-2">
-                  <span>6 Days Meghalaya Adventure</span>
-                  <span class="text-primary">₹21,499</span>
-                </div>
-                <div class="d-flex justify-content-between pt-2">
-                  <span>5 Days Sikkim Cultural Tour</span>
-                  <span class="text-primary">₹18,999</span>
-                </div>
-              </div>
-              <button class="btn btn-primary mt-4 w-100">Explore Northeast</button>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
+    
     </div>
   </section>
    <!-- why book with us end -->
@@ -1655,7 +1637,9 @@
     
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="js/formPdf.js"></script>
+    <script src="js/pdfForm.js"></script>
+    
+      
     <script src="js/testimonial.js"></script>
   </body>
 </html>
