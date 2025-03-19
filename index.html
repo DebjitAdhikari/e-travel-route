@@ -32,7 +32,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
-    
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <!-- Include Swiper CSS -->
@@ -112,7 +111,7 @@
             <a href="package.html" class="nav-item nav-link">Packages</a>
             <a href="blog.html" class="nav-item nav-link">Blog</a>
             <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
+          </div>
         </div>
       </nav>
     </div>
@@ -141,10 +140,13 @@
                   </h1>
                   <p class="mb-4 fs-5">
                     Experience seamless and personalized travel with Evolve
-                    Travel Route LLP. From breathtaking destinations to customized
-                    holiday packages, we turn your travel dreams into reality.
+                    Travel Route LLP. From breathtaking destinations to
+                    customized holiday packages, we turn your travel dreams into
+                    reality.
                   </p>
-                  <div class="d-flex justify-content-center justify-content-md-start">
+                  <div
+                    class="d-flex justify-content-center justify-content-md-start"
+                  >
                     <a
                       class="btn btn-primary rounded-pill text-white py-3 px-5"
                       href="#"
@@ -161,7 +163,7 @@
       </div>
     </div>
     <!-- Reservation Modal -->
-      
+
     <div
       class="modal fade"
       id="reservationModal"
@@ -219,7 +221,8 @@
                 </div>
                 <div class="col-md-6">
                   <label for="contactMethod" class="form-label">
-                    Preferred Contact Method</label>
+                    Preferred Contact Method</label
+                  >
                   <select class="form-select" id="contactMethod" required>
                     <option value="" disabled selected>
                       Select a contact method
@@ -231,7 +234,8 @@
                 </div>
                 <div class="col-md-6">
                   <label for="contactTime" class="form-label">
-                    Preferred Contact Time</label>
+                    Preferred Contact Time</label
+                  >
                   <select class="form-select" id="contactTime" required>
                     <option value="" disabled selected>Select a time</option>
                     <option value="Morning">Morning (9 AM - 12 PM)</option>
@@ -250,28 +254,51 @@
                   <div class="form-group">
                     <label class="form-label">Destination</label>
                     <div>
-                      <input type="checkbox" id="kashmir" value="Kashmir" name="destination[]">
+                      <input
+                        type="checkbox"
+                        id="kashmir"
+                        value="Kashmir"
+                        name="destination[]"
+                      />
                       <label for="kashmir">Kashmir</label>
                     </div>
                     <div>
-                      <input type="checkbox" id="ladakh" value="Ladakh" name="destination[]">
+                      <input
+                        type="checkbox"
+                        id="ladakh"
+                        value="Ladakh"
+                        name="destination[]"
+                      />
                       <label for="ladakh">Ladakh</label>
                     </div>
                     <div>
-                      <input type="checkbox" id="himachal" value="Himachal Pradesh" name="destination[]">
+                      <input
+                        type="checkbox"
+                        id="himachal"
+                        value="Himachal Pradesh"
+                        name="destination[]"
+                      />
                       <label for="himachal">Himachal Pradesh</label>
                     </div>
                     <div>
-                      <input type="checkbox" id="uttarakhand" value="Uttarakhand" name="destination[]">
+                      <input
+                        type="checkbox"
+                        id="uttarakhand"
+                        value="Uttarakhand"
+                        name="destination[]"
+                      />
                       <label for="uttarakhand">Uttarakhand</label>
                     </div>
                     <div>
-                      <input type="checkbox" id="rajasthan" value="Rajasthan" name="destination[]">
+                      <input
+                        type="checkbox"
+                        id="rajasthan"
+                        value="Rajasthan"
+                        name="destination[]"
+                      />
                       <label for="rajasthan">Rajasthan</label>
                     </div>
                   </div>
-                  
-                  
                 </div>
 
                 <!-- Travel Start Date -->
@@ -377,7 +404,9 @@
                       Select hotel category
                     </option>
                     <option value="Budget (2-star)">Budget (2-star)</option>
-                    <option value="Standard  (3-star)">Standard (3-star)</option>
+                    <option value="Standard  (3-star)">
+                      Standard (3-star)
+                    </option>
                     <option value="Premium (4-star)">Premium (4-star)</option>
                     <option value="Luxury  (5-star)">Luxury (5-star)</option>
                     <option value="Villa">Villa Stay</option>
@@ -451,29 +480,36 @@
                     <option value="" disabled selected>
                       Select a vehicle type
                     </option>
-                    <option value="Sedan (Swift Dzire, Etios)">Sedan (Swift Dzire, Etios)</option>
-                    <option value="SUV (Innova, Xylo)">SUV (Innova, Xylo)</option>
+                    <option value="Sedan (Swift Dzire, Etios)">
+                      Sedan (Swift Dzire, Etios)
+                    </option>
+                    <option value="SUV (Innova, Xylo)">
+                      SUV (Innova, Xylo)
+                    </option>
                     <option value="Tempo Traveller">Tempo Traveller</option>
                     <option value="Luxury Car">Luxury Car</option>
-                    <option value="No Transport Required">No Transport Required</option>
+                    <option value="No Transport Required">
+                      No Transport Required
+                    </option>
                   </select>
                 </div>
               </div>
-
-              
 
               <!-- Submit Button -->
               <div class="text-end mt-4">
                 <button type="submit" class="btn btn-primary px-4 py-2 me-3">
                   Confirm Booking
                 </button>
-                <a id="whatsappLink" href="#" style="display: none;" target="_blank" 
-                   class="btn btn-success px-4 py-2 d-inline-block">
+                <a
+                  id="whatsappLink"
+                  href="#"
+                  style="display: none"
+                  target="_blank"
+                  class="btn btn-success px-4 py-2 d-inline-block"
+                >
                   <i class="bi bi-whatsapp"></i> Send via WhatsApp
                 </a>
               </div>
-              
-  
             </form>
           </div>
         </div>
@@ -553,117 +589,178 @@
         </div>
       </div>
     </div>
-   <!-- why book with us start -->
-   <section class="why-book-section py-5 bg-gradient-primary position-relative">
-    <!-- Limited Time Offer Modal -->
-    <div class="modal fade" id="offerModal" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header bg-primary text-white">
-            <h5 class="modal-title">Special Offer! 🎉</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-          </div>
-          <div class="modal-body text-center p-5">
-            <h3 class="mb-4">Get ₹2,000 Off on Your First Booking!</h3>
-            <button class="btn btn-primary btn-lg">Claim Your Discount</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="container">
-      <!-- Section Heading -->
-      <div class="text-center mb-5">
-        <h2 class="text-uppercase text-primary mb-3">Why Book With Us?</h2>
-        <h1 class="display-5 fw-bold mb-4">Your Perfect Journey Begins Here</h1>
-      </div>
-  
-      <!-- Features Grid -->
-      <div class="row g-4 mb-5">
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-card bg-white p-4 rounded-3 shadow-sm text-center">
-            <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
-            <h4 class="mb-3">Best Price Guarantee</h4>
-            <p class="text-muted">Unbeatable rates with quality service assurance</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-card bg-white p-4 rounded-3 shadow-sm text-center">
-            <i class="fas fa-headset fa-3x text-primary mb-3"></i>
-            <h4 class="mb-3">24/7 Support</h4>
-            <p class="text-muted">Round-the-clock assistance during your trip</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-card bg-white p-4 rounded-3 shadow-sm text-center">
-            <i class="fas fa-map-marked-alt fa-3x text-primary mb-3"></i>
-            <h4 class="mb-3">Customizable Tours</h4>
-            <p class="text-muted">Tailor-made itineraries to suit your needs</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-card bg-white p-4 rounded-3 shadow-sm text-center">
-            <i class="fas fa-certificate fa-3x text-primary mb-3"></i>
-            <h4 class="mb-3">Award Winning</h4>
-            <p class="text-muted">Recognized for excellence in travel services</p>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Best Sellers Sections -->
-      <div class="row g-5">
-        <!-- Kashmir Packages -->
-        <div class="col-lg-6">
-            <div class="package-card bg-white rounded-3 shadow-sm overflow-hidden">
-                <div class="position-relative">
-                    <img src="https://cdn.pixabay.com/photo/2019/08/14/09/52/haji-peer-azad-kashmir-4405256_1280.jpg" alt="Kashmir" class="img-fluid">
-                    <div class="package-badge bg-primary text-white p-2 position-absolute top-0 end-0 m-3">
-                        <h5 class="mb-0">Bestseller</h5>
-                    </div>
-                </div>
-                <div class="p-4">
-                    <h3 class="mb-3">Explore Kashmir</h3>
-                    <ul class="list-unstyled">
-                        <li class="py-2"><i class="bi bi-check-circle text-primary"></i> Serene Houseboats & Shikara Rides</li>
-                        <li class="py-2"><i class="bi bi-check-circle text-primary"></i> Snowy Peaks & Breathtaking Views</li>
-                        <li class="py-2"><i class="bi bi-check-circle text-primary"></i> Handpicked Luxury Stays</li>
-                    </ul>
-                    <a href="package.html">
-
-                      <button class="btn btn-primary mt-4 w-100">View Packages</button>
-                    </a>
-                  </div>
+    <!-- why book with us start -->
+    <section
+      class="why-book-section py-5 bg-gradient-primary position-relative"
+    >
+      <!-- Limited Time Offer Modal -->
+      <div class="modal fade" id="offerModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+              <h5 class="modal-title">Special Offer! 🎉</h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+              ></button>
             </div>
-        </div>
-    
-        <!-- Northeast Packages -->
-        <div class="col-lg-6">
-            <div class="package-card bg-white rounded-3 shadow-sm overflow-hidden">
-                <div class="position-relative">
-                    <img src="https://cdn.pixabay.com/photo/2019/01/09/18/36/suwon-hwaseong-3923984_1280.jpg" alt="Northeast" class="img-fluid">
-                    <div class="package-badge bg-primary text-white p-2 position-absolute top-0 end-0 m-3">
-                        <h5 class="mb-0">Trending</h5>
-                    </div>
-                </div>
-                <div class="p-4">
-                    <h3 class="mb-3">Discover Northeast</h3>
-                    <ul class="list-unstyled">
-                        <li class="py-2"><i class="bi bi-check-circle text-primary"></i> Mesmerizing Waterfalls & Caves</li>
-                        <li class="py-2"><i class="bi bi-check-circle text-primary"></i> Unexplored Scenic Beauty</li>
-                        <li class="py-2"><i class="bi bi-check-circle text-primary"></i> Cultural & Adventure Bliss</li>
-                    </ul>
-                    <a href="package.html">
-
-                      <button class="btn btn-primary mt-4 w-100">View Packages</button>
-                    </a>
-                </div>
+            <div class="modal-body text-center p-5">
+              <h3 class="mb-4">Get ₹2,000 Off on Your First Booking!</h3>
+              <button class="btn btn-primary btn-lg">
+                Claim Your Discount
+              </button>
             </div>
+          </div>
         </div>
-    </div>
-    
-    </div>
-  </section>
-   <!-- why book with us end -->
+      </div>
+
+      <div class="container">
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+          <h2 class="text-uppercase text-primary mb-3">Why Book With Us?</h2>
+          <h1 class="display-5 fw-bold mb-4">
+            Your Perfect Journey Begins Here
+          </h1>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="row g-4 mb-5">
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="feature-card bg-white p-4 rounded-3 shadow-sm text-center"
+            >
+              <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+              <h4 class="mb-3">Best Price Guarantee</h4>
+              <p class="text-muted">
+                Unbeatable rates with quality service assurance
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="feature-card bg-white p-4 rounded-3 shadow-sm text-center"
+            >
+              <i class="fas fa-headset fa-3x text-primary mb-3"></i>
+              <h4 class="mb-3">24/7 Support</h4>
+              <p class="text-muted">
+                Round-the-clock assistance during your trip
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="feature-card bg-white p-4 rounded-3 shadow-sm text-center"
+            >
+              <i class="fas fa-map-marked-alt fa-3x text-primary mb-3"></i>
+              <h4 class="mb-3">Customizable Tours</h4>
+              <p class="text-muted">
+                Tailor-made itineraries to suit your needs
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="feature-card bg-white p-4 rounded-3 shadow-sm text-center"
+            >
+              <i class="fas fa-certificate fa-3x text-primary mb-3"></i>
+              <h4 class="mb-3">Award Winning</h4>
+              <p class="text-muted">
+                Recognized for excellence in travel services
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Best Sellers Sections -->
+        <div class="row g-5">
+          <!-- Kashmir Packages -->
+          <div class="col-lg-6">
+            <div
+              class="package-card bg-white rounded-3 shadow-sm overflow-hidden"
+            >
+              <div class="position-relative">
+                <img
+                  src="https://cdn.pixabay.com/photo/2019/08/14/09/52/haji-peer-azad-kashmir-4405256_1280.jpg"
+                  alt="Kashmir"
+                  class="img-fluid"
+                />
+                <div
+                  class="package-badge bg-primary text-white p-2 position-absolute top-0 end-0 m-3"
+                >
+                  <h5 class="mb-0">Bestseller</h5>
+                </div>
+              </div>
+              <div class="p-4">
+                <h3 class="mb-3">Explore Kashmir</h3>
+                <ul class="list-unstyled">
+                  <li class="py-2">
+                    <i class="bi bi-check-circle text-primary"></i> Serene
+                    Houseboats & Shikara Rides
+                  </li>
+                  <li class="py-2">
+                    <i class="bi bi-check-circle text-primary"></i> Snowy Peaks
+                    & Breathtaking Views
+                  </li>
+                  <li class="py-2">
+                    <i class="bi bi-check-circle text-primary"></i> Handpicked
+                    Luxury Stays
+                  </li>
+                </ul>
+                <a href="package.html">
+                  <button class="btn btn-primary mt-4 w-100">
+                    View Packages
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Northeast Packages -->
+          <div class="col-lg-6">
+            <div
+              class="package-card bg-white rounded-3 shadow-sm overflow-hidden"
+            >
+              <div class="position-relative">
+                <img
+                  src="https://cdn.pixabay.com/photo/2019/01/09/18/36/suwon-hwaseong-3923984_1280.jpg"
+                  alt="Northeast"
+                  class="img-fluid"
+                />
+                <div
+                  class="package-badge bg-primary text-white p-2 position-absolute top-0 end-0 m-3"
+                >
+                  <h5 class="mb-0">Trending</h5>
+                </div>
+              </div>
+              <div class="p-4">
+                <h3 class="mb-3">Discover Northeast</h3>
+                <ul class="list-unstyled">
+                  <li class="py-2">
+                    <i class="bi bi-check-circle text-primary"></i> Mesmerizing
+                    Waterfalls & Caves
+                  </li>
+                  <li class="py-2">
+                    <i class="bi bi-check-circle text-primary"></i> Unexplored
+                    Scenic Beauty
+                  </li>
+                  <li class="py-2">
+                    <i class="bi bi-check-circle text-primary"></i> Cultural &
+                    Adventure Bliss
+                  </li>
+                </ul>
+                <a href="package.html">
+                  <button class="btn btn-primary mt-4 w-100">
+                    View Packages
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- why book with us end -->
     <!-- Values Section -->
     <section class="values-section py-5 bg-light">
       <div class="container">
@@ -956,21 +1053,43 @@
       <div class="container py-5">
         <div class="row g-5 align-items-center">
           <div class="col-lg-12 col-xl-12 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="packages-item h-100 p-5 rounded shadow-lg" style="border: 2px solid #0d6efd; background: #fff;">
+            <div
+              class="packages-item h-100 p-5 rounded shadow-lg"
+              style="border: 2px solid #0d6efd; background: #fff"
+            >
               <h4 class="text-primary fw-bold">Ticket Packages</h4>
               <h1 class="display-5 fw-bold mb-4">
                 Choose The Best Packages For Your Family
               </h1>
               <p class="mb-4">
-                Our Domestic Tour Packages offer unforgettable travel experiences, covering stunning destinations across India and around the world. Whether you seek adventure, relaxation, or cultural exploration, we have the perfect itinerary for you!
+                Our Domestic Tour Packages offer unforgettable travel
+                experiences, covering stunning destinations across India and
+                around the world. Whether you seek adventure, relaxation, or
+                cultural exploration, we have the perfect itinerary for you!
               </p>
               <div class="text-start">
-                <p><i class="fa fa-check text-primary me-2"></i> Tailored travel plans to match your preferences and budget.</p>
-                <p><i class="fa fa-check text-primary me-2"></i> Dedicated customer assistance throughout your journey.</p>
-                <p><i class="fa fa-check text-primary me-2"></i> Accommodation, transport, meals, and sightseeing covered.</p>
-                <p class="mb-4"><i class="fa fa-check text-primary me-2"></i> Well-planned tours ensuring a hassle-free experience.</p>
+                <p>
+                  <i class="fa fa-check text-primary me-2"></i> Tailored travel
+                  plans to match your preferences and budget.
+                </p>
+                <p>
+                  <i class="fa fa-check text-primary me-2"></i> Dedicated
+                  customer assistance throughout your journey.
+                </p>
+                <p>
+                  <i class="fa fa-check text-primary me-2"></i> Accommodation,
+                  transport, meals, and sightseeing covered.
+                </p>
+                <p class="mb-4">
+                  <i class="fa fa-check text-primary me-2"></i> Well-planned
+                  tours ensuring a hassle-free experience.
+                </p>
               </div>
-              <a href="package.html" class="btn btn-primary rounded-pill py-2 px-3 shadow-sm" style="transition: all 0.3s;">
+              <a
+                href="package.html"
+                class="btn btn-primary rounded-pill py-2 px-3 shadow-sm"
+                style="transition: all 0.3s"
+              >
                 View Packages
               </a>
             </div>
@@ -978,7 +1097,7 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Ticket Packages End -->
 
     <!-- Attractions Start -->
@@ -1031,7 +1150,7 @@
           <div class="attractions-item wow fadeInUp" data-wow-delay="0.8s">
             <img
               src="https://i.pinimg.com/736x/ed/5e/0a/ed5e0a5d6c8a7bf2fec188d6ce621ebd.jpg"
-              class="img-fluid rounded  w-100"
+              class="img-fluid rounded w-100"
               alt=""
             />
             <a href="#" class="attractions-name">Sawdong Falls</a>
@@ -1049,187 +1168,124 @@
     </div>
     <!-- Attractions End -->
 
-
-   
-
-   
-
     <!-- Testimonial Start -->
     <div class="container-fluid testimonial py-5" style="background: #414155">
       <div class="container py-5">
         <div class="text-center mx-auto pb-5" style="max-width: 800px">
           <h4 class="text-primary">Testimonial</h4>
-          <h1 class="display-5 text-white mb-4">Our Customer Says</h1>
+          <h1 class="display-5 text-white mb-4">What Our Customers Say</h1>
           <p class="text-white mb-0">
-            We take pride in delivering exceptional services that exceed
-            expectations. Our clients' feedback speaks volumes about our
-            dedication, professionalism, and commitment to excellence.
+            See what our customers are saying through their experiences and
+            video testimonials.
           </p>
         </div>
 
-        <div class="row g-4 testimonial-grid">
-          <!-- Visible Testimonials -->
-          <div class="col-lg-4 col-md-6 testimonial-item visible">
-            <div class="testimonial-card p-4 h-100">
-              <div
-                class="media-preview mb-4"
-                data-bs-toggle="modal"
-                data-bs-target="#mediaModal"
-                data-media-type="image"
-                data-media-src="img/bg-tour-3.jpg"
-              >
-                <img
-                  src="img/bg-tour-3.jpg"
-                  class="img-fluid rounded"
-                  alt="Customer"
-                />
-                <div class="media-hover"><i class="fas fa-expand"></i></div>
-              </div>
-              <p class="text-white fs-5 mb-4">
-                "Absolutely life-changing experience! The team's professionalism
-                and attention to detail are unmatched in the industry."
-              </p>
-              <div class="testimonial-footer">
-                <h4 class="text-white">Debjit Adhikari</h4>
-                <div class="d-flex text-warning mb-2">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 testimonial-item visible">
-            <div class="testimonial-card p-4 h-100">
-              <div
-                class="media-preview mb-4"
-                data-bs-toggle="modal"
-                data-bs-target="#mediaModal"
-                data-media-type="video"
-                data-media-src="videos/tour-review-video.mp4"
-              >
-                <video class="img-fluid rounded">
-                  <source
-                    src="https://videos.pexels.com/video-files/30416945/13034748_1440_2560_30fps.mp4"
-                    type="video/mp4"
+        <!-- Swiper Slider -->
+        <div class="swiper testimonial-slider">
+          <div class="swiper-wrapper">
+            <!-- Video Slide 1 -->
+            <!-- Video Slide 1 -->
+            <!-- <div class="swiper-slide">
+              <div class="video-card">
+                <div
+                  class="video-thumbnail"
+                  onclick="openModal('dQw4w9WgXcQ', 'video')"
+                >
+                  <img
+                    src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg"
+                    alt="Testimonial Video"
                   />
-                </video>
-                <div class="media-hover"><i class="fas fa-play"></i></div>
-              </div>
-              <p class="text-white fs-5 mb-4">
-                "Outstanding results! They transformed our business completely.
-                Truly a game-changer in the market!"
-              </p>
-              <div class="testimonial-footer">
-                <h4 class="text-white">Sanjit Pal</h4>
-                <div class="d-flex text-warning mb-2">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <div class="play-button"><i class="fab fa-youtube"></i></div>
                 </div>
               </div>
-            </div>
-          </div>
+            </div> -->
 
-          <div class="col-lg-4 col-md-6 testimonial-item visible">
-            <div class="testimonial-card p-4 h-100">
-              <div
-                class="media-preview mb-4"
-                data-bs-toggle="modal"
-                data-bs-target="#mediaModal"
-                data-media-type="image"
-                data-media-src="img/bg-tour-3.jpg"
-              >
-                <img
-                  src="img/bg-tour-3.jpg"
-                  class="img-fluid rounded"
-                  alt="Customer"
-                />
-                <div class="media-hover"><i class="fas fa-expand"></i></div>
-              </div>
-              <p class="text-white fs-5 mb-4">
-                "Absolutely life-changing experience! The team's professionalism
-                and attention to detail are unmatched in the industry."
-              </p>
-              <div class="testimonial-footer">
-                <h4 class="text-white">Debjit Adhikari</h4>
-                <div class="d-flex text-warning mb-2">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Hidden Testimonials -->
-          <div class="col-lg-4 col-md-6 testimonial-item hidden">
-            <!-- Add 2 more testimonials with same structure -->
-            <div class="testimonial-card p-4 h-100">
-              <div
-                class="media-preview mb-4"
-                data-bs-toggle="modal"
-                data-bs-target="#mediaModal"
-                data-media-type="video"
-                data-media-src="videos/tour-review-video.mp4"
-              >
-                <video class="img-fluid rounded">
-                  <source
-                    src="https://videos.pexels.com/video-files/30416945/13034748_1440_2560_30fps.mp4"
-                    type="video/mp4"
+            <!-- Video Slide 1 (Shorts) -->
+            <div class="swiper-slide">
+              <div class="video-card">
+                <div
+                  class="video-thumbnail"
+                  onclick="openModal('wNr_WYQSiA8', 'short')"
+                >
+                  <img
+                    src="https://img.youtube.com/vi/wNr_WYQSiA8/hqdefault.jpg"
+                    alt="Testimonial Short"
                   />
-                </video>
-                <div class="media-hover"><i class="fas fa-play"></i></div>
-              </div>
-              <p class="text-white fs-5 mb-4">
-                "Outstanding results! They transformed our business completely.
-                Truly a game-changer in the market!"
-              </p>
-              <div class="testimonial-footer">
-                <h4 class="text-white">Sanjit Pal</h4>
-                <div class="d-flex text-warning mb-2">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <div class="play-button"><i class="fab fa-youtube"></i></div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+            <!-- Video Slide 2 (Shorts) -->
+            <div class="swiper-slide">
+              <div class="video-card">
+                <div
+                  class="video-thumbnail"
+                  onclick="openModal('A_s_W-aNL4A', 'short')"
+                >
+                  <img
+                    src="https://img.youtube.com/vi/A_s_W-aNL4A/hqdefault.jpg"
+                    alt="Testimonial Short"
+                  />
+                  <div class="play-button"><i class="fab fa-youtube"></i></div>
+                </div>
+              </div>
+            </div>
+            <!-- Video Slide 3 (Shorts) -->
+            <div class="swiper-slide">
+              <div class="video-card">
+                <div
+                  class="video-thumbnail"
+                  onclick="openModal('_5BzmX1m86Y', 'short')"
+                >
+                  <img
+                    src="https://img.youtube.com/vi/_5BzmX1m86Y/hqdefault.jpg"
+                    alt="Testimonial Short"
+                  />
+                  <div class="play-button"><i class="fab fa-youtube"></i></div>
+                </div>
+              </div>
+            </div>
+            <!-- Video Slide 4 (Shorts) -->
+            <div class="swiper-slide">
+              <div class="video-card">
+                <div
+                  class="video-thumbnail"
+                  onclick="openModal('mYbFlT-G7h4', 'short')"
+                >
+                  <img
+                    src="https://img.youtube.com/vi/mYbFlT-G7h4/hqdefault.jpg"
+                    alt="Testimonial Short"
+                  />
+                  <div class="play-button"><i class="fab fa-youtube"></i></div>
+                </div>
+              </div>
+            </div>
 
-        <div class="text-center mt-5">
-          <button class="btn btn-primary btn-see-more py-2 px-4">
-            See More <i class="fas fa-chevron-down ms-2"></i>
-          </button>
+            
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
 
-    <!-- Media Modal -->
-    <div class="modal fade" id="mediaModal" tabindex="-1">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content bg-dark">
-          <div class="modal-body p-0">
-            <button
-              type="button"
-              class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
-              data-bs-dismiss="modal"
-            ></button>
-            <div id="media-container">
-              <!-- Dynamic content loaded here -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Video Modal -->
+    <!-- Video Modal -->
+<div id="videoModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <iframe id="youtubePlayer" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+    <!-- Video Modal -->
+
     <!-- Testimonial End -->
 
     <!-- new updates start -->
@@ -1255,7 +1311,8 @@
               />
               <h3 class="text-primary fw-bold">Best Time to Visit Kashmir</h3>
               <p class="text-muted">
-                This is when Kashmir bursts into vibrant colors, with blooming flowers, especially the famous Tulip Garden.
+                This is when Kashmir bursts into vibrant colors, with blooming
+                flowers, especially the famous Tulip Garden.
               </p>
               <a href="#" class="text-primary fw-bold"
                 >Read More <i class="fas fa-arrow-right"></i
@@ -1273,7 +1330,8 @@
               />
               <h3 class="text-primary fw-bold">Top Things to Do in Gulmarg</h3>
               <p class="text-muted">
-                This is a must-do. It's one of the highest cable cars in the world, offering breathtaking panoramic views of the Himalayas.
+                This is a must-do. It's one of the highest cable cars in the
+                world, offering breathtaking panoramic views of the Himalayas.
               </p>
               <a href="#" class="text-primary fw-bold"
                 >Read More <i class="fas fa-arrow-right"></i
@@ -1289,9 +1347,12 @@
                 alt="Travel Tips"
                 class="img-fluid rounded-3 mb-3"
               />
-              <h3 class="text-primary fw-bold"> Kashmir Packing Guide – What to Carry?</h3>
+              <h3 class="text-primary fw-bold">
+                Kashmir Packing Guide – What to Carry?
+              </h3>
               <p class="text-muted">
-                Whether you're visiting in summer or winter, layering is crucial. Temperatures can fluctuate throughout the day. 
+                Whether you're visiting in summer or winter, layering is
+                crucial. Temperatures can fluctuate throughout the day.
               </p>
               <a href="#" class="text-primary fw-bold"
                 >Read More <i class="fas fa-arrow-right"></i
@@ -1341,14 +1402,24 @@
           <div class="col-md-6 col-lg-6 col-xl-2">
             <div class="footer-item">
               <h4 class="text-white mb-4">Quick Links</h4>
-              <a href="index.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
-              <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
-              <a href="package.html"><i class="fas fa-angle-right me-2"></i> Packages</a>
+              <a href="index.html"
+                ><i class="fas fa-angle-right me-2"></i> About Us</a
+              >
+              <a href="about.html"
+                ><i class="fas fa-angle-right me-2"></i> About Us</a
+              >
+              <a href="package.html"
+                ><i class="fas fa-angle-right me-2"></i> Packages</a
+              >
               <!-- <a href="#"><i class="fas fa-angle-right me-2"></i> Feature</a> -->
               <!-- <a href="#"><i class="fas fa-angle-right me-2"></i> Attractions</a> -->
               <!-- <a href="#"><i class="fas fa-angle-right me-2"></i> Tickets</a> -->
-              <a href="blog.html"><i class="fas fa-angle-right me-2"></i> Blog</a>
-              <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact us</a>
+              <a href="blog.html"
+                ><i class="fas fa-angle-right me-2"></i> Blog</a
+              >
+              <a href="contact.html"
+                ><i class="fas fa-angle-right me-2"></i> Contact us</a
+              >
             </div>
           </div>
           <div class="col-md-6 col-lg-6 col-xl-2">
@@ -1392,7 +1463,6 @@
                   </p>
                 </div>
               </div>
-              
             </div>
           </div>
         </div>
@@ -1437,12 +1507,64 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      // Initialize Swiper
+var swiper = new Swiper(".testimonial-slider", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+// Open Video Modal
+function openModal(videoId, type) {
+  var modal = document.getElementById("videoModal");
+  var iframe = document.getElementById("youtubePlayer");
+
+  // Construct the correct YouTube embed URL
+  iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1`;
+
+  modal.style.display = "flex"; // Ensure the modal is visible
+}
+
+// Close Modal Function
+function closeModal() {
+  var modal = document.getElementById("videoModal");
+  var iframe = document.getElementById("youtubePlayer");
+
+  iframe.src = ""; // Stop video when closing modal
+  modal.style.display = "none";
+}
+
+// Close modal when clicking outside
+window.onclick = function (event) {
+  var modal = document.getElementById("videoModal");
+  if (event.target === modal) {
+    closeModal();
+  }
+};
+
+    </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script src="js/pdfForm.js"></script>
-    
-      
+
     <script src="js/testimonial.js"></script>
   </body>
 </html>
